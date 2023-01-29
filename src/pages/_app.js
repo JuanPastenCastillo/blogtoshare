@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }) {
     <Fragment>
       <Head>
       <title>Blog - JUAN PASTÉN CASTILLO</title>
-        
+      
       </Head>
       <GlobalStyle />
       <Layout>

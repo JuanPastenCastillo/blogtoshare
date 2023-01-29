@@ -12,6 +12,9 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  font-family: 'Space Grotesk', sans-serif;
+
+
   
 }
 
@@ -38,9 +41,6 @@ a {
 
 
 /* 
-
-!FH0
-Make the build and push the proyect to internet
 
 
 !FH
