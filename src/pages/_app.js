@@ -7,8 +7,7 @@ export default function App({ Component, pageProps }) {
   return (
     <Fragment>
       <Head>
-      <title>Blog - JUAN PASTÉN CASTILLO</title>
-      
+        <title>Blog - JUAN PASTÉN CASTILLO</title>
       </Head>
       <GlobalStyle />
       <Layout>
