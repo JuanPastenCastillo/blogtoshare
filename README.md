@@ -1,1 +1,1 @@
-This is a blog where I post all the things I want to share with the community and the worl. Please, feel free to read and make comentaries about it
+This is a blog where I post all the things I want to share with the community and the worl. Please, feel free to read and make comentaries about it.
