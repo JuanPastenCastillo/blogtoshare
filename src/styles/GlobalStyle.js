@@ -5,7 +5,7 @@ export const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  transition: all 0.3s;
+  /* transition: all 0.3s; */
 }
 
 html,

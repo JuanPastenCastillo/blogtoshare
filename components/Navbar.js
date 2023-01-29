@@ -5,7 +5,6 @@ import { NavbarWrapper } from "./styles/NavbarWrapper.js"
 
 export const Navbar = () => {
   const [navExpanded, setNavExpanded] = useState(false)
-  console.log("navExpanded:", navExpanded)
 
   const handleNavExpanded = (e) => {
     setNavExpanded((prevState) => !prevState)
