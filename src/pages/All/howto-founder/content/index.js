@@ -1,6 +1,6 @@
 import Link from "next/link"
-import  HowToFounder_ContentWrapper  from "./styles/HowToFounder_ContentWrapper.js"
-import { DATA_TO_DISPLAY } from "../../../../../components/howto-founder/content/DATA_TO_DISPLAY.JS"
+import HowToFounder_ContentWrapper from "./styles/HowToFounder_ContentWrapper.js"
+import { DATA_TO_DISPLAY } from "../../../../../components/howto-founder/content/DATA_TO_DISPLAY.js"
 import { Fragment } from "react"
 import { useRouter } from "next/router.js"
 import { BackComponent } from "../../../../../components/back/BackComponent.js"
@@ -11,13 +11,16 @@ const HowToFounder_Content = (parameters) => {
 
   return (
     <HowToFounder_ContentWrapper>
-      <BackComponent/>
+      <BackComponent />
       <h2>Content</h2>
       <p>Click or touch on some of the titles to go to the content</p>
 
       <ul>
         {DATA_TO_DISPLAY.map((x, i) => {
+          // console.log("x:", x)
           const indexToUse = i + 1
+          const dataToPass = JSON.stringify(x.theData)
+          // console.log('dataToShow:', dataToShow)
 
           return (
             <Fragment key={`${x.title}_${x.source.title}_${x.source.url}`}>
@@ -25,7 +28,13 @@ const HowToFounder_Content = (parameters) => {
                 <Link
                   href={{
                     pathname: `content/${indexToUse}`,
-                    query: { post: indexToUse, title: x.title, originalTitle: x.source.title, source: x.source.url }
+                    query: {
+                      post: indexToUse,
+                      title: x.title,
+                      originalTitle: x.source.originalTitle,
+                      source: x.source.sourceUrl,
+                      dataToShow:dataToPass
+                    }
                   }}
                   as={`${asPath}/${indexToUse}`}>
                   <h3>

@@ -16,7 +16,6 @@ export const Navbar = () => {
 
   const checkPathnameAll = /[All]\/\w|[All]/.test(pathname) ? "active" : null
 
-
   return (
     <NavbarWrapper navExpanded={navExpanded}>
       <BarResponsiveMenuSVG onClick={handleNavExpanded} />
