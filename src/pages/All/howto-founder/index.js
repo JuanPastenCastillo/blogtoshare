@@ -1,11 +1,12 @@
 import Link from "next/link.js"
 import { BackSVG } from "../../../../assets/icons/index.js"
+import { BackComponent } from "../../../../components/back/BackComponent.js"
 import  HowToFounderWrapper  from "./styles/HowToFounderWrapper.js"
 
 const HowToFounder = (parameters) => {
   return (
     <HowToFounderWrapper>
-      <BackSVG/>
+      <BackComponent/>
       <h2>Information to learn about the Founder role on a StartUp</h2>
       <p>This entry have three parts:</p>
       <p>

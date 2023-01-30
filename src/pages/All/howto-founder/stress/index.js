@@ -1,6 +1,9 @@
+import { BackComponent } from "../../../../../components/back/BackComponent"
+
 const HowToFounder_Stress = (parameters) => {
   return (
     <div>
+      <BackComponent/>
       HowToFounder_Stress
     </div>
   )

@@ -1,8 +1,12 @@
+import { BackComponent } from "../../../../../components/back/BackComponent"
+
 const Dinamyc = (props) => {
   const { post, originalTitle, source, title } = props.query
 
   return (
     <div>
+      <BackComponent/>
+      
       <h2>{title}</h2>
       <p>Post number: {post}</p>
       <p>

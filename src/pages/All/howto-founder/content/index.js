@@ -3,6 +3,7 @@ import  HowToFounder_ContentWrapper  from "./styles/HowToFounder_ContentWrapper.
 import { DATA_TO_DISPLAY } from "../../../../../components/howto-founder/content/DATA_TO_DISPLAY.JS"
 import { Fragment } from "react"
 import { useRouter } from "next/router.js"
+import { BackComponent } from "../../../../../components/back/BackComponent.js"
 
 const HowToFounder_Content = (parameters) => {
   const router = useRouter()
@@ -10,6 +11,7 @@ const HowToFounder_Content = (parameters) => {
 
   return (
     <HowToFounder_ContentWrapper>
+      <BackComponent/>
       <h2>Content</h2>
       <p>Click or touch on some of the titles to go to the content</p>
 
