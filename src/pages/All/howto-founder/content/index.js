@@ -1,9 +1,9 @@
 import Link from "next/link"
 import HowToFounder_ContentWrapper from "./styles/HowToFounder_ContentWrapper.js"
-import { DATA_TO_DISPLAY } from "../../../../../components/howto-founder/content/DATA_TO_DISPLAY.js"
 import { Fragment } from "react"
 import { useRouter } from "next/router.js"
 import { BackComponent } from "../../../../../components/back/BackComponent.js"
+import { DATA_TO_DISPLAY } from "../../../../../components/howto-founder/content/DATA_TO_DISPLAY.JS"
 
 const HowToFounder_Content = (parameters) => {
   const router = useRouter()

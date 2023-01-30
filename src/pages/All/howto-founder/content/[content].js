@@ -2,7 +2,7 @@ import { Fragment } from "react"
 import { BackComponent } from "../../../../../components/back/BackComponent"
 
 const Dinamyc = (props) => {
-  const { post, originalTitle, source, title, dataToShow } = props.query
+  const { post, originalTitle, source, title, dataToShow = "[]" } = props.query
 
   const formatDataToShow = JSON.parse(dataToShow)
 
