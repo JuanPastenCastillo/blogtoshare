@@ -10,9 +10,12 @@ export const Navbar = () => {
   const handleNavExpanded = (e) => {
     setNavExpanded((prevState) => !prevState)
   }
-  
+
   const router = useRouter()
-  const {pathname} = router
+  const { pathname } = router
+
+  const checkPathnameAll = /[All]\/\w|[All]/.test(pathname) ? "active" : null
+
 
   return (
     <NavbarWrapper navExpanded={navExpanded}>
@@ -21,7 +24,7 @@ export const Navbar = () => {
         <li className={pathname === "/" ? "active" : null}>
           <Link href="/"> About this page</Link>
         </li>
-        <li className={pathname === "/All" ? "active" : null}>
+        <li className={checkPathnameAll}>
           <Link href="/All">All Content</Link>
         </li>
         <li className={pathname === "/Contact" ? "active" : null}>
