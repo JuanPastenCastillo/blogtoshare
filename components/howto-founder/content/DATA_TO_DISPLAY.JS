@@ -61,3 +61,10 @@ export const DATA_TO_DISPLAY = [
   },
   
 ]
+
+
+/* 
+!FH
+Create all the theData. Think a way to split the information, if is not, this file is going to be huge!
+
+*/

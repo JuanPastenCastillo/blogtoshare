@@ -16,3 +16,17 @@ export default function App({ Component, pageProps }) {
     </Fragment>
   )
 }
+
+
+/* 
+
+!FH-1
+
+Android Text to Speech
+https://youtu.be/Ka5AdeLt43o
+
+iPhone:
+https://youtu.be/DC6jjLOpaJ0
+
+https://apps.apple.com/us/app/text-to-speech/id322329515
+*/

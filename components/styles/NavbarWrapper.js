@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { PRIMARY, SECONDARY } from "../../assets/Colors.js"
 
 export const NavbarWrapper = styled.nav`
   margin-bottom: 32px;
@@ -22,8 +23,8 @@ export const NavbarWrapper = styled.nav`
     margin-inline: 32px;
     justify-content: center;
     gap: 16px;
-
-    & > a {
+    
+    & > li {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -37,22 +38,36 @@ export const NavbarWrapper = styled.nav`
       cursor: pointer;
       transition: all 0.1s;
 
-      border-bottom: 2px solid hsl(218.5, 79.2%, 66.1%, 0.6);
+      border-bottom: 2px solid ${PRIMARY.PRIMARY_DARK};
       height: 55px;
 
       &:hover,
       &:active {
-        border: 2px solid hsl(218.5, 79.2%, 66.1%, 0.9);
+        border: 2px solid ${PRIMARY.PRIMARY_LIGHT};
       }
+
+      & > a {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    
+    .active{
+      color: ${PRIMARY.PRIMARY_LIGHT};
+      border: 2px solid ${PRIMARY.PRIMARY_LIGHT};
     }
   }
 
   @media (max-width: 768px) {
-    box-shadow: 0.3px 0.5px 0.7px hsl(180, 100%, 35%), 0.5px 0.9px 1.2px -1.2px hsl(180, 100%, 35%),
-    1.2px 2.4px 3px -2.5px hsl(180, 100%, 35%);
-    
+    box-shadow: 0.3px 0.5px 0.7px ${SECONDARY.SECONDARY}, 0.5px 0.9px 1.2px -1.2px ${SECONDARY.SECONDARY},
+      1.2px 2.4px 3px -2.5px ${SECONDARY.SECONDARY};
+
     padding-bottom: 0px;
-    
+
     & > :nth-child(1) {
       display: block;
       cursor: pointer;
@@ -62,12 +77,11 @@ export const NavbarWrapper = styled.nav`
       z-index: 1;
 
       &:hover > path {
-        fill: hsl(180, 100%, 35%);
+        fill: ${SECONDARY.SECONDARY};
       }
 
       & > path {
-        fill: ${(x) => (x.navExpanded ? "hsl(180, 100%, 35%)" : "white")};
-        
+        fill: ${(x) => (x.navExpanded ? `${SECONDARY.SECONDARY_LIGHT}` : "white")};
       }
     }
 
@@ -77,19 +91,26 @@ export const NavbarWrapper = styled.nav`
       display: ${(x) => (x.navExpanded ? "flex" : "none")};
       flex-direction: column;
 
-      background-color: hsl(180, 100%, 15%);
-
+      background-color: ${SECONDARY.SECONDARY_DARK};
 
       & > a {
         border: 2px solid transparent;
       }
       & > a:hover,
       & > a:active {
-        background-color: hsl(180, 100%, 25%);
+        background-color: ${SECONDARY.SECONDARY_DARK};
         border: 2px solid transparent;
         border-radius: 0px;
       }
+      
+      .active{
+        background-color: ${SECONDARY.SECONDARY_LIGHT};
+        color:black;
+        border:2px solid transparent
+      }
+      
+      
+      
     }
   }
 `
-

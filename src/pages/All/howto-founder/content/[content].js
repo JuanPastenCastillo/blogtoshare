@@ -1,5 +1,4 @@
 const Dinamyc = (props) => {
-  // console.log("props:", props)
   const { post, originalTitle, source, title } = props.query
 
   return (
@@ -28,3 +27,13 @@ export const getServerSideProps = (context) => {
     }
   }
 }
+
+
+/* 
+!FH
+Add a button or arrow or something to back to previous page
+
+
+
+
+*/

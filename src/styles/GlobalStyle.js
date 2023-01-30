@@ -12,6 +12,7 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   font-family: 'Space Grotesk', sans-serif;
+  color-scheme: dark;
 }
 
 
@@ -20,10 +21,5 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
 
 `
