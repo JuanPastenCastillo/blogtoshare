@@ -10,11 +10,20 @@ export const GlobalStyle = createGlobalStyle`
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
   font-family: 'Space Grotesk', sans-serif;
   color-scheme: dark;
+  
 }
 
+h1,h2,h3,h4,h5{
+   margin-bottom: 2rem ;
+  }
+  
+p{
+  margin-bottom:1rem ;
+}
+
+  
 
 a {
   color: inherit;

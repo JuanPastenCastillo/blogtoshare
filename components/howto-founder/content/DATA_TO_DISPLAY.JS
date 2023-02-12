@@ -1,19 +1,13 @@
-import { DATA_FIVE_CREATED } from "./DATA_FIVE"
-import { DATA_FOUR_CREATED } from "./DATA_FOUR"
-import { DATA_ONE_CREATED } from "./DATA_ONE"
-import { DATA_THREE_CREATED } from "./DATA_THREE"
-import { DATA_TWO_CREATED } from "./DATA_TWO"
+import { DATA_CREATED_1 } from "./DATA_1/DATA_CREATED_1.js"
+import { DATA_CREATED_2 } from "./DATA_2/DATA_CREATED_2.js"
+import { DATA_CREATED_3 } from "./DATA_3/DATA_CREATED_3.js"
+import { DATA_CREATED_4 } from "./DATA_4/DATA_CREATED_4.js"
+import { DATA_CREATED_5 } from "./DATA_5/DATA_CREATED_5.js"
 
 export const DATA_TO_DISPLAY = [
-  DATA_ONE_CREATED,
-  DATA_TWO_CREATED,
-  DATA_THREE_CREATED,
-  DATA_FOUR_CREATED,
-  DATA_FIVE_CREATED
+  DATA_CREATED_1,
+  DATA_CREATED_2,
+  DATA_CREATED_3,
+  DATA_CREATED_4,
+  DATA_CREATED_5
 ]
-
-/* 
-!FH
-Create all the theData. Think a way to split the information, if is not, this file is going to be huge!
-
-*/

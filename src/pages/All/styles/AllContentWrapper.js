@@ -3,6 +3,7 @@ import styled from "styled-components";
 const AllContentWrapper = styled.div`
   display: grid;
   gap:1rem;
+  overflow-x: hidden;
   
   & > ul{
     border: 2px solid green;
