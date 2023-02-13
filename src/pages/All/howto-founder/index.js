@@ -1,9 +1,8 @@
 import Link from "next/link.js"
-import { BackSVG } from "../../../../assets/icons/index.js"
 import { BackComponent } from "../../../../components/back/BackComponent.js"
-import  HowToFounderWrapper  from "./styles/HowToFounderWrapper.js"
+import HowToFounderWrapper from "./styles/HowToFounderWrapper.js"
 
-const HowToFounder = (parameters) => {
+const HowToFounder = () => {
   return (
     <HowToFounderWrapper>
       <BackComponent/>

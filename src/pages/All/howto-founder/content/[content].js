@@ -11,7 +11,7 @@ const Dinamyc = () => {
   const [dataToShow, setdataToShow] = useState()
 
   useEffect(() => {
-    if (router.query.content !== undefined && router.query.content >= 1 && router.query.content <= 5) {
+    if (router.query.content !== undefined && router.query.content >= 1 && router.query.content <= 18) {
       DynamicFunction({ moduleName: router.query.content, functionName: router.query.content }).then(
         (dynamicDataImported) => {
           setdataToShow(dynamicDataImported)

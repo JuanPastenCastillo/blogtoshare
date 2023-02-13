@@ -18,7 +18,6 @@ const HowToFounder_Content = () => {
       <ul>
         {DATA_TO_DISPLAY.map((x, i) => {
           const indexToUse = i + 1
-          const dataToPass = JSON.stringify(x.theData)
           return (
             <Fragment key={`${x.title}_${x.source.title}_${x.source.url}`}>
               <li>
