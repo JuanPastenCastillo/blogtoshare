@@ -5,7 +5,7 @@ const TITLE = "The harsh reality of founding and leading a startup. The story of
 
 const ORIGINAL_TITLE = "La dura realidad de fundar y dirigir una Startup. La historia de Freddy Vega"
 
-const SOURCE_URL = "https://youtu.be/jQ19FCO4MYA"
+const SOURCE_URL = ["https://youtu.be/jQ19FCO4MYA"]
 const SOURCE_AUTHOR = "Platzi"
 const SOURCE_DAY = "14"
 const SOURCE_MONTH = "Apr"

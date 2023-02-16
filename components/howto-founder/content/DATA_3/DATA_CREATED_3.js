@@ -5,7 +5,7 @@ const TITLE = "What CEOs of startups need to know"
 
 const ORIGINAL_TITLE = "Qué necesitan saber los CEO de startups"
 const SOURCE_AUTHOR = "Platzi"
-const SOURCE_URL = "https://youtu.be/x0SiT9Eukrs"
+const SOURCE_URL = ["https://youtu.be/x0SiT9Eukrs"]
 const SOURCE_DAY = "07"
 const SOURCE_MONTH = "Jun"
 const SOURCE_YEAR = "2022"

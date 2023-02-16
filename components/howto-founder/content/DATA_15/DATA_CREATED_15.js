@@ -1,14 +1,14 @@
 import { LayoutFoundersData } from "../../../../utils/LayoutFoundersData"
 import { DATA_TO_SHOW } from "./DATA_TO_SHOW"
 
-const TITLE = ""
+const TITLE = "Stopping climate change using artificial intelligence | The story of PACHAMA."
 
-const ORIGINAL_TITLE = ""
-const SOURCE_URL = ""
-const SOURCE_AUTHOR = ""
-const SOURCE_DAY = ""
-const SOURCE_MONTH = ""
-const SOURCE_YEAR = ""
+const ORIGINAL_TITLE = "Frenar el cambio climático usando inteligencia artificial | La historia de PACHAMA"
+const SOURCE_URL = ["https://youtu.be/U93Dvp84KZU"]
+const SOURCE_AUTHOR = "Platzi"
+const SOURCE_DAY = "10"
+const SOURCE_MONTH = "Aug"
+const SOURCE_YEAR = "2021"
 
 export const DATA_CREATED_15 = LayoutFoundersData({
   TITLE,

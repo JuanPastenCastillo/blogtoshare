@@ -4,7 +4,7 @@ import { DATA_TO_SHOW } from "./DATA_TO_SHOW"
 const TITLE = "How to Have the Ability to Learn Fast | Courtney McColgan, Runa Founder"
 
 const ORIGINAL_TITLE = "Cómo tener la habilidad de aprender rápido | Courtney McColgan, fundadora de Runa"
-const SOURCE_URL = "https://youtu.be/M-yZMVa-TeI"
+const SOURCE_URL = ["https://youtu.be/M-yZMVa-TeI"]
 const SOURCE_AUTHOR = "Platzi"
 const SOURCE_DAY = "03"
 const SOURCE_MONTH = "May"

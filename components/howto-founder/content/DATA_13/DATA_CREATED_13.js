@@ -1,14 +1,14 @@
 import { LayoutFoundersData } from "../../../../utils/LayoutFoundersData"
 import { DATA_TO_SHOW } from "./DATA_TO_SHOW"
 
-const TITLE = ""
+const TITLE = "What will be the future of investments 💸 | Carlos Guayara, founder of Trii"
 
-const ORIGINAL_TITLE = ""
-const SOURCE_URL = ""
-const SOURCE_AUTHOR = ""
-const SOURCE_DAY = ""
-const SOURCE_MONTH = ""
-const SOURCE_YEAR = ""
+const ORIGINAL_TITLE = "Cuál será el futuro de las inversiones 💸 | Carlos Guayara, fundador de Trii"
+const SOURCE_URL = ["https://youtu.be/tugEnUyhYuw"]
+const SOURCE_AUTHOR = "Platzi"
+const SOURCE_DAY = "27"
+const SOURCE_MONTH = "Nov"
+const SOURCE_YEAR = "2021"
 
 export const DATA_CREATED_13 = LayoutFoundersData({
   TITLE,

@@ -4,7 +4,7 @@ import { DATA_TO_SHOW } from "./DATA_TO_SHOW"
 const TITLE = "The truths of having a Startup"
 
 const ORIGINAL_TITLE = "Las verdades de tener una Startup"
-const SOURCE_URL = "https://youtu.be/Xva1aODyG1w"
+const SOURCE_URL = ["https://youtu.be/Xva1aODyG1w"]
 const SOURCE_AUTHOR = "Platzi"
 const SOURCE_DAY = "15"
 const SOURCE_MONTH = "Jul"

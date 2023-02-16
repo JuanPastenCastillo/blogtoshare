@@ -1,14 +1,14 @@
 import { LayoutFoundersData } from "../../../../utils/LayoutFoundersData"
 import { DATA_TO_SHOW } from "./DATA_TO_SHOW"
 
-const TITLE = ""
+const TITLE = "The Chilean unicorn that creates food with Artificial Intelligence - Matias Muchnick"
 
-const ORIGINAL_TITLE = ""
-const SOURCE_URL = ""
-const SOURCE_AUTHOR = ""
-const SOURCE_DAY = ""
-const SOURCE_MONTH = ""
-const SOURCE_YEAR = ""
+const ORIGINAL_TITLE = "El unicornio chileno que crea comida con Inteligencia Artificial - Matias Muchnick"
+const SOURCE_URL = ["https://youtu.be/hgn6oHSyZSs"]
+const SOURCE_AUTHOR = "Platzi"
+const SOURCE_DAY = "26"
+const SOURCE_MONTH = "Jul"
+const SOURCE_YEAR = "2021"
 
 export const DATA_CREATED_10 = LayoutFoundersData({
   TITLE,

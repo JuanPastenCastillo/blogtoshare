@@ -20,8 +20,6 @@ const DinamycWrapper = styled.div`
   }
 
   & > :last-child {
-
-    
     margin-top: 32px;
     margin-bottom: 120px;
     position: relative;
@@ -36,13 +34,18 @@ const DinamycWrapper = styled.div`
     & > pre{
       padding-top: 8px;
       white-space: pre-wrap;
-      /* font-weight: bolder; */
     }
     
-    & > pre > a{
+    & > pre > div > a{
       margin-left: 2px;
       font-weight: bolder;
       text-decoration: underline;
+      white-space: normal;
+      
+    }
+    
+    & > pre > div >:not(:first-child){
+      margin-left: 8px;
     }
 
     &::before {

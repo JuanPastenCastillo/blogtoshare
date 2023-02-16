@@ -4,7 +4,7 @@ import { DATA_TO_SHOW } from "./DATA_TO_SHOW"
 const TITLE = "How to be more of a leader and less of a follower"
 
 const ORIGINAL_TITLE = "Cómo ser MÁS LÍDER y menos follower"
-const SOURCE_URL = "https://youtu.be/uIVFEpenReI"
+const SOURCE_URL = ["https://youtu.be/uIVFEpenReI"]
 const SOURCE_AUTHOR = "Platzi"
 const SOURCE_DAY = "04"
 const SOURCE_MONTH = "Apr"

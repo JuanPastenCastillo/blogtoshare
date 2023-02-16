@@ -5,13 +5,13 @@ import { DynamicFunction } from "../../../../../utils/GetDynamicImport.js"
 import DinamycWrapper from "./styles/DinamycWrapper"
 
 const Dinamyc = () => {
-
   const router = useRouter()
 
   const [dataToShow, setdataToShow] = useState()
+  // console.log("dataToShow:", dataToShow)
 
   useEffect(() => {
-    if (router.query.content !== undefined && router.query.content >= 1 && router.query.content <= 18) {
+    if (router.query.content !== undefined && router.query.content >= 1 && router.query.content <= 19) {
       DynamicFunction({ moduleName: router.query.content, functionName: router.query.content }).then(
         (dynamicDataImported) => {
           setdataToShow(dynamicDataImported)
@@ -22,17 +22,26 @@ const Dinamyc = () => {
     }
   }, [router.query.content])
 
-  const [formattedData, setFormattedData] = useState({ formatAuthor: "", formatMonth: "" })
+  const [formattedData, setFormattedData] = useState({ formatAuthor: "", formatMonth: "", formatURL: "" })
+  // console.log("dataToShow:", dataToShow)
+
+  // let toURL = new Intl.ListFormat("en-US").format(dataToShow.source.sourceUrl)
+  // console.log('toURL:', toURL)
 
   useEffect(() => {
     if (dataToShow !== undefined) {
       let toAuthor = dataToShow.source.author[0].toUpperCase() + dataToShow.source.author.slice(1)
       let toMonth = dataToShow.source.month[0].toUpperCase() + dataToShow.source.month.slice(1)
+      let toURL = new Intl.ListFormat("en-US").format(dataToShow.source.sourceUrl)
+      // console.log("toURL:", toURL)
+
+      // console.log('new Intl.ListFormat("en-US").format(dataToShow.source.sourceUrl):', new Intl.ListFormat("en-US").format(dataToShow.source.sourceUrl))
 
       setFormattedData((prevState) => ({
         ...prevState,
         formatAuthor: toAuthor,
-        formatMonth: toMonth
+        formatMonth: toMonth,
+        formatURL: toURL
       }))
     }
   }, [dataToShow])
@@ -59,6 +68,7 @@ const Dinamyc = () => {
               {dataToShow.theData.map((x, i) => {
                 if (x[0].toLowerCase() === "introduction" || x[0].toLowerCase() === "content") {
                   if (Array.isArray(x[1])) {
+                    // console.log('x:', x)
                     return (
                       <Fragment key={i}>
                         {x[1].map((xNested) => {
@@ -111,13 +121,49 @@ const Dinamyc = () => {
               <h2>Reference</h2>
               <pre>
                 {formattedData.formatAuthor}. ({dataToShow.source.day}, {formattedData.formatMonth},{" "}
-                {dataToShow.source.year}). {dataToShow.source.originalTitle}. Source:
-                <a
-                  href={dataToShow.source.sourceUrl}
-                  target="_blank"
-                  rel="noreferrer">
-                  {dataToShow.source.sourceUrl}
-                </a>{" "}
+                {dataToShow.source.year}). {dataToShow.source.originalTitle}.{" "}
+                <div>
+                  Source:
+                  {dataToShow.source.sourceUrl.map((x, i) => {
+                    // console.log("dataToShow.source.sourceUrl:", dataToShow.source.sourceUrl)
+                    // console.log("i:", i)
+                    if (i === dataToShow.source.sourceUrl.length - 2) {
+                      return (
+                        <Fragment key={`${x}${i}`}>
+                          <a
+                            href={x}
+                            target="_blank"
+                            rel="noreferrer">
+                            {x}
+                          </a>
+                          <span>and</span>
+                        </Fragment>
+                      )
+                    }
+                    if (i === dataToShow.source.sourceUrl.length - 1) {
+                      return (
+                        <Fragment key={`${x}${i}`}>
+                          <a
+                            href={x}
+                            target="_blank"
+                            rel="noreferrer">
+                            {x}
+                          </a>
+                        </Fragment>
+                      )
+                    }
+                    return (
+                      <Fragment key={`${x}${i}`}>
+                        <a
+                          href={x}
+                          target="_blank"
+                          rel="noreferrer">
+                          {x},
+                        </a>
+                      </Fragment>
+                    )
+                  })}
+                </div>
               </pre>
             </>
           ) : null}
@@ -127,4 +173,3 @@ const Dinamyc = () => {
   )
 }
 export default Dinamyc
-

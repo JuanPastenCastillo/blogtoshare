@@ -4,7 +4,7 @@ import { DATA_TO_SHOW } from "./DATA_TO_SHOW"
 const TITLE = "How to find your co-founder (Don't start alone!)"
 
 const ORIGINAL_TITLE = "Cómo encontrar a tu cofundador ( No emprendas solo! )"
-const SOURCE_URL = "https://youtu.be/_kVMSexFIeg"
+const SOURCE_URL = ["https://youtu.be/_kVMSexFIeg"]
 const SOURCE_AUTHOR = "Platzi"
 const SOURCE_DAY = "12"
 const SOURCE_MONTH = "Nov"

@@ -1,14 +1,14 @@
 import { LayoutFoundersData } from "../../../../utils/LayoutFoundersData"
 import { DATA_TO_SHOW } from "./DATA_TO_SHOW"
 
-const TITLE = ""
+const TITLE = "From Duolingo to founding her own startup | Gina Gotthilf, VP of Marketing at Duolingo"
 
-const ORIGINAL_TITLE = ""
-const SOURCE_URL = ""
-const SOURCE_AUTHOR = ""
-const SOURCE_DAY = ""
-const SOURCE_MONTH = ""
-const SOURCE_YEAR = ""
+const ORIGINAL_TITLE = "De Duolingo a fundar su propia Startup | Gina Gothilff, VP de Marketing en Duolingo"
+const SOURCE_URL = ["https://youtu.be/rC665j1dVK8"]
+const SOURCE_AUTHOR = "Platzi"
+const SOURCE_DAY = "08"
+const SOURCE_MONTH = "Feb"
+const SOURCE_YEAR = "2021"
 
 export const DATA_CREATED_16 = LayoutFoundersData({
   TITLE,
