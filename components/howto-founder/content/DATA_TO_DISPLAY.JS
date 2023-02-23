@@ -1,3 +1,4 @@
+import { DATA_CREATED_0 } from "./DATA_0/DATA_CREATED_0.js"
 import { DATA_CREATED_1 } from "./DATA_1/DATA_CREATED_1.js"
 import { DATA_CREATED_10 } from "./DATA_10/DATA_CREATED_10.js"
 import { DATA_CREATED_11 } from "./DATA_11/DATA_CREATED_11.js"
@@ -19,6 +20,7 @@ import { DATA_CREATED_8 } from "./DATA_8/DATA_CREATED_8.js"
 import { DATA_CREATED_9 } from "./DATA_9/DATA_CREATED_9.js"
 
 export const DATA_TO_DISPLAY = [
+  DATA_CREATED_0,
   DATA_CREATED_1,
   DATA_CREATED_2,
   DATA_CREATED_3,

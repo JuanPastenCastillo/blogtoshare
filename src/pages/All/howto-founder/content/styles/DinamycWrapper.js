@@ -18,10 +18,18 @@ const DinamycWrapper = styled.div`
   .shouldIndent{
     margin-left: 24px;
   }
+  
+  .shouldIndent2{
+    margin-left: 32px;
+  }
+  .shouldIndent3{
+    margin-left: 38px;
+  }
 
   & > :last-child {
     margin-top: 32px;
     margin-bottom: 120px;
+    
     position: relative;
     height: 5px;
     background-color: white;
@@ -59,24 +67,14 @@ const DinamycWrapper = styled.div`
       border-radius: 50%;
       background-color: white;
     }
-
-    /* &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background-color: green;
-    }
-    
-    &::before{
-      left: -10px;
-    }
-    &::after{
-      right: -10px;
-    } */
   }
+  
+  
+  & > :last-child pre{
+    /* border: 2px solid crimson; */
+    
+  }
+  
 `
 
 export default DinamycWrapper

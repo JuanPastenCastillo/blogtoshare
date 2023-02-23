@@ -23,11 +23,11 @@ const HowToFounder_Content = () => {
               <li>
                 <Link
                   href={{
-                    pathname: `content/${indexToUse}`
+                    pathname: `content/${i}`
                   }}
-                  as={`${asPath}/${indexToUse}`}>
+                  as={`${asPath}/${i}`}>
                   <h3>
-                    {indexToUse}) {x.title}
+                    {i}) {x.title}
                   </h3>
                 </Link>
               </li>
