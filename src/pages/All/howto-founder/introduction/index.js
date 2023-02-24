@@ -1,11 +1,14 @@
 import { BackComponent } from "../../../../../components/back/BackComponent"
+import { IntroductionContent } from "../../../../../components/howto-founder/introduction/IntroductionContent"
+import HowToFounder_IntroductionWrapper from './styles/HowToFounder_IntroductionWrapper.js'
 
-const HowToFounder_Introduction = (parameters) => {
+
+const HowToFounder_Introduction = () => {
   return (
-    <div>
+    <HowToFounder_IntroductionWrapper>
       <BackComponent/>
-      HowToFounder_Introduction
-    </div>
+      <IntroductionContent/>
+    </HowToFounder_IntroductionWrapper>
   )
 }
 export default HowToFounder_Introduction

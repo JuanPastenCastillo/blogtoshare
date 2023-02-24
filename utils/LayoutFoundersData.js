@@ -10,7 +10,7 @@ export const LayoutFoundersData = ({
   isMultipleSources = false,
   MULTIPLE_REFERENCES
 }) => {
-  if ((isMultipleSources ===false)) {
+  if (isMultipleSources === false) {
     return {
       title: TITLE,
       source: {
@@ -26,15 +26,10 @@ export const LayoutFoundersData = ({
     }
   }
 
-  
-  
   return {
     title: TITLE,
     source: MULTIPLE_REFERENCES,
     theData: DATA_TO_SHOW,
     isMultipleSources
   }
-  
-  
-  
 }
