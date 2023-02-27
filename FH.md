@@ -10,7 +10,12 @@
   * Make the text
   * Share the text
 
+- In the [conent].js file make the same behavior of the navbar as youtube does: when the user scroll down and scroll a little bit up, the navbar will automatically be in position to use it.
+- In the [conent].js file when the user scroll down a little bit, a button to go up should display.
+  
+
 - Add accessibility features:
+ * The component should be able to show and hide
  * Font-size
  * Letter spacing
  * Line height
@@ -19,7 +24,11 @@
  * Zoom in and zoom out
  * Color: light, dark, sepia
 
+- Create About this page, contact and footer
+
 - Create good looking UI
+
+
 
  
  
