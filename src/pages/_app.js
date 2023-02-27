@@ -1,7 +1,7 @@
 import Head from "next/head"
 import { Fragment } from "react"
 import { Layout } from "../../components/Layout"
-import { UserView_Provider } from "../../context/userViewContext"
+import { UserView_Provider } from "../../context/UserViewContext"
 import { GlobalStyle } from "../styles/GlobalStyle"
 
 export default function App({ Component, pageProps }) {
