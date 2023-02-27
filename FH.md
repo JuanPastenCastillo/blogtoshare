@@ -3,12 +3,20 @@
 ✅- Add multiple references on entry content
 ✅- Check the button of return it back
 ✅- Add introduction
-- When the user return from the dynamic page to the previous one, the page should not go to top automatically, should maintain the scroll position
 ✅- Clean console console logs
+✅- When the user return from the dynamic page to the previous one, the page should not go to top automatically, should maintain the scroll position
 
 - Follow with stress:
   * Make the text
   * Share the text
+
+- Interview Jillian:
+  * Make questions
+  * Share questions with Jillian
+  * Schedule a meeting to the interview
+  * Do the interview + record it
+  * Extract main ideas
+  * Put it in the blog
 
 - In the [conent].js file make the same behavior of the navbar as youtube does: when the user scroll down and scroll a little bit up, the navbar will automatically be in position to use it.
 - In the [conent].js file when the user scroll down a little bit, a button to go up should display.
@@ -28,9 +36,4 @@
 
 - Create good looking UI
 
-
-
- 
- 
-- Make improvements in the UI
-- Share the webpage on Twitter, adding the handle of every person who participated there with the @ symbol. Specially, give them the thanks for it.
+- Share it in twitter

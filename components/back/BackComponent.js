@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { BackSVG } from "../../assets/icons"
 import { BackComponentWrapper } from "./styles/BackComponentWrapper.js"
 
-export const BackComponent = (parameters) => {
+export const BackComponent = () => {
   const router = useRouter()
   const { asPath } = router
 
@@ -15,12 +15,11 @@ export const BackComponent = (parameters) => {
   }, [])
 
   const handlePush = (e) => {
-    if (e.key === "Enter") {
-      router.push(routeToPush)
-    } else if (e.type === "click") {
-      router.push(routeToPush)
+    if (e.key === "Enter" || e.type === "click") {
+      router.push(routeToPush, undefined, { scroll: false })
     }
   }
+  
 
   return (
     <BackComponentWrapper

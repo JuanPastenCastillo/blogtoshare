@@ -1,6 +1,7 @@
 import Head from "next/head"
 import { Fragment } from "react"
 import { Layout } from "../../components/Layout"
+import { UserView_Provider } from "../../context/userViewContext"
 import { GlobalStyle } from "../styles/GlobalStyle"
 
 export default function App({ Component, pageProps }) {
@@ -10,13 +11,15 @@ export default function App({ Component, pageProps }) {
         <title>Blog - JUAN PASTÉN CASTILLO</title>
       </Head>
       <GlobalStyle />
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+
+      <UserView_Provider>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </UserView_Provider>
     </Fragment>
   )
 }
-
 
 /* 
 
