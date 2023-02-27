@@ -3,7 +3,7 @@ import { useRouter } from "next/router.js"
 import { Fragment, useEffect } from "react"
 import { BackComponent } from "../../../../../components/back/BackComponent.js"
 import { DATA_TO_DISPLAY } from "../../../../../components/howto-founder/content/DATA_TO_DISPLAY.JS"
-import { useUserView_Ctx } from "../../../../../context/userViewContext.js"
+import { useUserView_Ctx } from "../../../../../context/UserViewContext.js"
 import HowToFounder_ContentWrapper from "./styles/HowToFounder_ContentWrapper.js"
 
 const HowToFounder_Content = () => {
