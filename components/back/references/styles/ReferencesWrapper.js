@@ -19,6 +19,8 @@ export const ReferencesWrapper = styled.div`
     font-weight: bolder;
     text-decoration: underline;
     white-space: normal;
+    word-break: break-word;
+    
   }
 
   & > pre > div > :not(:first-child) {

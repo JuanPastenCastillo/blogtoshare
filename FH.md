@@ -2,9 +2,9 @@
 ✅- Add zero entry in content
 ✅- Add multiple references on entry content
 ✅- Check the button of return it back
-👀- Add introduction
+✅- Add introduction
 - When the user return from the dynamic page to the previous one, the page should not go to top automatically, should maintain the scroll position
-- Clean console console logs
+✅- Clean console console logs
 
 - Follow with stress:
   * Make the text
