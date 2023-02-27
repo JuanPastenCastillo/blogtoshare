@@ -1,4 +1,3 @@
-import { BackComponent } from "../../../../../components/back/BackComponent"
 import { IntroductionContent } from "../../../../../components/howto-founder/introduction/IntroductionContent"
 import HowToFounder_IntroductionWrapper from './styles/HowToFounder_IntroductionWrapper.js'
 
@@ -6,7 +5,6 @@ import HowToFounder_IntroductionWrapper from './styles/HowToFounder_Introduction
 const HowToFounder_Introduction = () => {
   return (
     <HowToFounder_IntroductionWrapper>
-      <BackComponent/>
       <IntroductionContent/>
     </HowToFounder_IntroductionWrapper>
   )

@@ -1,14 +1,17 @@
+import { References } from "../../back/references/References"
+import { PostArticle } from "../../post-article/PostArticle"
 import { DATA_CREATED } from "./data/DATA_CREATED"
-import { IntroductionWrapper } from './styles/IntroductionWrapper.js'
-
-console.log('DATA_CREATED:', DATA_CREATED)
-
-
+import { IntroductionWrapper } from "./styles/IntroductionWrapper.js"
 
 export const IntroductionContent = () => {
   return (
     <IntroductionWrapper>
-      <h1>{ DATA_CREATED.title}</h1>
+
+      <PostArticle dataToShow={DATA_CREATED} />
+      
+      <References referencesData={DATA_CREATED.source} />
+      
+      
     </IntroductionWrapper>
   )
 }

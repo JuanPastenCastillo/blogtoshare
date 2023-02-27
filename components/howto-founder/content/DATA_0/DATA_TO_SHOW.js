@@ -204,9 +204,10 @@ export const DATA_TO_SHOW = [
     ]
   ],
   [
-    `content`,
+    `quote`,
     [
-      `«All the things are masters when I'm a good apprentice, and I'm a good apprentice when I treat myself with love». — Jorge Iván Carvajal Posada.`
+      `All the things are masters when I'm a good apprentice, and I'm a good apprentice when I treat myself with love.`,
+      `— Jorge Iván Carvajal Posada.`
     ]
   ]
 ]

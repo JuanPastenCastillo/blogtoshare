@@ -1,8 +1,8 @@
 ✅- Check if there is any repeated key
 ✅- Add zero entry in content
 ✅- Add multiple references on entry content
+✅- Check the button of return it back
 👀- Add introduction
-- Check the button of return it back
 - When the user return from the dynamic page to the previous one, the page should not go to top automatically, should maintain the scroll position
 - Clean console console logs
 
@@ -18,6 +18,8 @@
  * Margin lef and right
  * Zoom in and zoom out
  * Color: light, dark, sepia
+
+- Create good looking UI
 
  
  

@@ -1,7 +1,7 @@
 export const Footer = (parameters) => {
   return (
     <div>
-      {/* Footer */}
+      Footer
     </div>
   )
 }
