@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const PostArticleWrapper = styled.div`
   padding: 2rem;
-  
+
   & > :nth-child(1) {
     position: sticky;
     top: 0;
@@ -23,6 +23,24 @@ export const PostArticleWrapper = styled.div`
   }
   .shouldIndent3 {
     margin-left: 38px;
+  }
+
+  .LikePoem {
+    padding-inline: auto;
+    display: grid;
+    justify-items: center;
+    margin-bottom: 2rem;
+    & > * {
+      margin-bottom: 0;
+    }
+  }
+  
+  @media (max-width:382px) {
+    .LikePoem{
+      justify-items: start;
+    }
+    
+    
   }
 
   & > :last-child {

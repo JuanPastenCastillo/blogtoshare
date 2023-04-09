@@ -3,7 +3,6 @@ import { BackComponent } from "../back/BackComponent.js"
 import { PostArticleWrapper } from "./styles/PostArticleWrapper.js"
 
 export const PostArticle = ({ dataToShow, numberPost = "" }) => {
-  // console.log('dataToShow:', dataToShow)
   return (
     <PostArticleWrapper>
       <BackComponent />
@@ -15,6 +14,7 @@ export const PostArticle = ({ dataToShow, numberPost = "" }) => {
       ) : null}
 
       {dataToShow.theData.map((x, i) => {
+        
         if (x[0].toLowerCase() === "introduction" || x[0].toLowerCase() === "content") {
           if (Array.isArray(x[1])) {
             return (
@@ -36,7 +36,6 @@ export const PostArticle = ({ dataToShow, numberPost = "" }) => {
               </Fragment>
             )
           }
-          
 
           return (
             <Fragment key={`${x[0]}_${i}`}>
@@ -107,6 +106,22 @@ export const PostArticle = ({ dataToShow, numberPost = "" }) => {
               <p>Something go wrong, check it out </p>
             </Fragment>
           )
+        }
+
+        if (x[0].toLowerCase() === "likepoem") {
+          console.log("💖",x)
+          if (Array.isArray(x[1])) {
+            return (
+              <div
+                key={`${x[0]}_${i}`}
+                className="LikePoem">
+                {x[1].map((xNested) => {
+                  return <p key={xNested}>{xNested}</p>
+                })}
+              </div>
+            )
+          }
+          
         }
 
         if (x[0].toLowerCase() === "title2") {

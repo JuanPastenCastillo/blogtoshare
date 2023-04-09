@@ -385,12 +385,8 @@ Mistakes also, errors are also a teacher. Life is a learning process: whether yo
     ]
   ],
   [`title3`, [`Sufi poem: synthesis of mindfulness in a poem «The Guest House» from Rumi`]],
-  /* 
-  !FH1
-  Make something with this to format the poem as the markdown file
-  */
   [
-    `indent3`,
+    `likePoem`,
     [
       `Human being is a guest house.`,
       `Every morning a new arrival. `,
@@ -401,7 +397,7 @@ Mistakes also, errors are also a teacher. Life is a learning process: whether yo
     ]
   ],
   [
-    `indent3`,
+    `likePoem`,
     [
       `Even if they're a crowd of sorrows,`,
       `Who violently sweep your house`,
@@ -412,7 +408,7 @@ Mistakes also, errors are also a teacher. Life is a learning process: whether yo
     ]
   ],
   [
-    `indent3`,
+    `likePoem`,
     [
       `The dark thought, the shame, the malice,`,
       `Meet them at the door laughing,`,
