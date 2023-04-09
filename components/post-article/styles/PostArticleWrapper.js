@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const PostArticleWrapper = styled.div`
   padding: 2rem;
-
+  
   & > :nth-child(1) {
     position: sticky;
     top: 0;

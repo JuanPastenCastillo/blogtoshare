@@ -8,9 +8,10 @@ export const References = ({ referencesData }) => {
     return (
       <ReferencesWrapper>
         <h2>Reference:</h2>
-        
+
         <pre>
-          {referencesData.author}. ({referencesData.day}, {referencesData.month}, {referencesData.year}). {referencesData.originalTitle}.{" "}
+          {referencesData.author}. ({referencesData.day}, {referencesData.month}, {referencesData.year}).{" "}
+          {referencesData.originalTitle}.{" "}
           <div>
             Recovery from:{" "}
             {referencesData.sourceUrl.map((x, i) => {
@@ -54,7 +55,9 @@ export const References = ({ referencesData }) => {
         </pre>
       </ReferencesWrapper>
     )
-  } else {
+  }
+
+  if (isOnlyOneReference === false) {
     return (
       <ReferencesWrapper>
         <h2>References:</h2>

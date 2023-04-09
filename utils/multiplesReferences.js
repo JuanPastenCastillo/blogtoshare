@@ -1,4 +1,4 @@
-export const multipleReferences = ( author, year, title, url ) => {
+export const multipleReferences = ( author, year, title, url = "" ) => {
   return {
     author: author,
     year: year,

@@ -1,10 +1,10 @@
 export const LayoutFoundersData = ({
   TITLE,
   ORIGINAL_TITLE,
-  SOURCE_URL,
+  SOURCE_URL = "",
   SOURCE_AUTHOR,
-  SOURCE_DAY,
-  SOURCE_MONTH,
+  SOURCE_DAY = "",
+  SOURCE_MONTH = "",
   SOURCE_YEAR,
   DATA_TO_SHOW,
   isMultipleSources = false,

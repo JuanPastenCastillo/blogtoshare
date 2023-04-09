@@ -1,31 +1,26 @@
 import { Fragment } from "react"
 import { BackComponent } from "../back/BackComponent.js"
-import { PostArticleWrapper } from './styles/PostArticleWrapper.js'
-
-
+import { PostArticleWrapper } from "./styles/PostArticleWrapper.js"
 
 export const PostArticle = ({ dataToShow, numberPost = "" }) => {
+  // console.log('dataToShow:', dataToShow)
   return (
     <PostArticleWrapper>
       <BackComponent />
-        <h1>{dataToShow.title}</h1>
-        {numberPost ? (
-          <>
-            <p>Post number: {numberPost}</p>
-          </>
-        ) : null}
-        
-        
-        
-        
-      
+      <h1>{dataToShow.title}</h1>
+      {numberPost ? (
+        <>
+          <p>Post number: {numberPost}</p>
+        </>
+      ) : null}
+
       {dataToShow.theData.map((x, i) => {
         if (x[0].toLowerCase() === "introduction" || x[0].toLowerCase() === "content") {
           if (Array.isArray(x[1])) {
             return (
               <Fragment key={`${x[0]}_${i}`}>
                 {x[1].map((xNested) => {
-                  const shouldIndent = /^[1-9][0-9]?\)|Q:|A:/.test(xNested.substring(0, 2))
+                  const shouldIndent = /^[1-9][0-9]?|Q:|A:|^[A-Z]\)/.test(xNested.substring(0, 2))
                   if (shouldIndent) {
                     return (
                       <p
@@ -41,6 +36,8 @@ export const PostArticle = ({ dataToShow, numberPost = "" }) => {
               </Fragment>
             )
           }
+          
+
           return (
             <Fragment key={`${x[0]}_${i}`}>
               <p key={x[1]}>{x[1]}</p>
@@ -124,13 +121,16 @@ export const PostArticle = ({ dataToShow, numberPost = "" }) => {
         if (x[0].toLowerCase() === "title5") {
           return <h5 key={`${x[0]}_${i}`}>{x[1]}</h5>
         }
+        if (x[0].toLowerCase() === "title6") {
+          return <h6 key={`${x[0]}_${i}`}>{x[1]}</h6>
+        }
         return (
           <div key={`${i}`}>
             <p>Something go wrong!❌</p>
           </div>
         )
       })}
-      
+
       <div></div>
     </PostArticleWrapper>
   )

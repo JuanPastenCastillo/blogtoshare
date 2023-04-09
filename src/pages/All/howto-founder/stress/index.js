@@ -1,11 +1,10 @@
-import { BackComponent } from "../../../../../components/back/BackComponent"
+import { StressContent } from "../../../../../components/howto-founder/stress/StressContent"
 
 const HowToFounder_Stress = (parameters) => {
   return (
-    <div>
-      <BackComponent/>
-      HowToFounder_Stress
-    </div>
+    <>
+      <StressContent />
+    </>
   )
 }
 export default HowToFounder_Stress

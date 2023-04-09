@@ -4,6 +4,10 @@ export const ReferencesWrapper = styled.div`
   padding-inline: 2rem;
   margin-bottom: 36px;
 
+  &.linkRecoveryFrom:visited {
+    color: cornflowerblue;
+  }
+
   & > pre {
     padding-top: 8px;
     white-space: pre-wrap;
@@ -20,7 +24,10 @@ export const ReferencesWrapper = styled.div`
     text-decoration: underline;
     white-space: normal;
     word-break: break-word;
-    
+
+    &:hover {
+      color: cornflowerblue;
+    }
   }
 
   & > pre > div > :not(:first-child) {

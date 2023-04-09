@@ -6,13 +6,14 @@
 ✅- Clean console console logs
 ✅- When the user return from the dynamic page to the previous one, the page should not go to top automatically, should maintain the scroll position
 
-- Follow with stress:
+✅- Follow with stress:
   * Make the text
   * Share the text
 
 - Interview Jillian:
-  * Make questions
+  * Compile questions
   * Share questions with Jillian
+  * Know which question will be done and which not
   * Schedule a meeting to the interview
   * Do the interview + record it
   * Extract main ideas
