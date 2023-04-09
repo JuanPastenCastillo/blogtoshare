@@ -2,7 +2,7 @@ import { LayoutFoundersData } from "../../../../utils/LayoutFoundersData"
 import { DATA_TO_SHOW } from "./DATA_TO_SHOW"
 import { MULTIPLE_REFERENCES } from "./MULTIPLE_REFERENCES"
 
-const TITLE = "How to Manage Stress: Mental and Physical Perspective"
+const TITLE = "How to Manage Stress: Mental and Physical Perspective plus Techniques"
 
 export const DATA_CREATED = LayoutFoundersData({
   TITLE,
