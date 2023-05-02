@@ -6,7 +6,7 @@ export const PostArticleWrapper = styled.div`
   & > :nth-child(1) {
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 2;
     margin-left: -2rem;
 
     & > svg {

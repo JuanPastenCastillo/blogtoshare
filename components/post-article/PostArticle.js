@@ -14,13 +14,13 @@ export const PostArticle = ({ dataToShow, numberPost = "" }) => {
       ) : null}
 
       {dataToShow.theData.map((x, i) => {
-        
+
         if (x[0].toLowerCase() === "introduction" || x[0].toLowerCase() === "content") {
           if (Array.isArray(x[1])) {
             return (
               <Fragment key={`${x[0]}_${i}`}>
                 {x[1].map((xNested) => {
-                  const shouldIndent = /^[1-9][0-9]?|Q:|A:|^[A-Z]\)/.test(xNested.substring(0, 2))
+                  const shouldIndent = /^[0-9][0-9]?|Q:|A:|^[A-Z]\)/.test(xNested.substring(0, 2))
                   if (shouldIndent) {
                     return (
                       <p
@@ -109,7 +109,7 @@ export const PostArticle = ({ dataToShow, numberPost = "" }) => {
         }
 
         if (x[0].toLowerCase() === "likepoem") {
-          console.log("💖",x)
+          console.log("💖", x)
           if (Array.isArray(x[1])) {
             return (
               <div
@@ -121,7 +121,7 @@ export const PostArticle = ({ dataToShow, numberPost = "" }) => {
               </div>
             )
           }
-          
+
         }
 
         if (x[0].toLowerCase() === "title2") {
