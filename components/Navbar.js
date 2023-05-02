@@ -1,6 +1,6 @@
 import Link from "next/link.js"
 import { useRouter } from "next/router.js"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { BarResponsiveMenuSVG } from "../assets/icons/index.js"
 import { NavbarWrapper } from "./styles/NavbarWrapper.js"
 
@@ -16,8 +16,39 @@ export const Navbar = () => {
 
   const checkPathnameAll = /[All]\/\w|[All]/.test(pathname) ? "active" : null
 
+  const [prevScrollY, setPrevScrollY] = useState(0)
+  const [mustShow, setMustShow] = useState(true)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+
+      if (currentScrollY > prevScrollY && prevScrollY >= 46) {
+        setMustShow(false)
+      } else {
+        setMustShow(true)
+      }
+
+      setPrevScrollY(currentScrollY)
+    }
+
+    // attach scroll event listener
+    window.addEventListener("scroll", handleScroll)
+
+    // remove scroll event listener when component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [prevScrollY])
+
+
   return (
-    <NavbarWrapper navExpanded={navExpanded}>
+    <NavbarWrapper
+      navExpanded={navExpanded}
+      mustShow={mustShow}
+      className={mustShow ? "mustShow" : "mustHide"}
+      shouldSticky={prevScrollY < 51 && "shouldSticky"}
+    >
       <BarResponsiveMenuSVG onClick={handleNavExpanded} />
       <ul>
         <li className={pathname === "/" ? "active" : null}>

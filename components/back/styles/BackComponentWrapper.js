@@ -2,9 +2,10 @@ import styled from "styled-components"
 import { PRIMARY, SECONDARY } from "../../../assets/Colors"
 
 export const BackComponentWrapper = styled.div`
-  /* border: 2px solid green; */
-  
   width:33px;
+  
+  /* position: relative; */
+  /* z-index:999; */
 
   & > :nth-child(1) {
     width: 33px;

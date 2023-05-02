@@ -1,5 +1,29 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import { PRIMARY, SECONDARY } from "../../assets/Colors.js"
+
+const milliseconsToUse = `0.2s`
+
+const mustHideKeyframes = keyframes`
+  from {
+    transform:translateY(0px);
+  }
+
+  to {
+    transform:translateY(-100px);
+    opacity:0;
+  }
+`
+const mustShowKeyframes = keyframes`
+  from {
+    transform:translateY(-100px);
+    opacity: 0;
+  }
+
+  to {
+    transform:translateY(0);
+    opacity: 1;
+  }
+`
 
 export const NavbarWrapper = styled.nav`
   margin-bottom: 32px;
@@ -8,6 +32,24 @@ export const NavbarWrapper = styled.nav`
 
   box-shadow: 0.3px 0.5px 0.7px hsl(218.5, 79.2%, 66.1%, 0.6), 0.5px 0.9px 1.2px -1.2px hsl(218.5, 79.2%, 66.1%, 0.6),
     1.2px 2.4px 3px -2.5px hsl(218.5, 79.2%, 66.1%, 0.6);
+
+    background-color: hsl(248.6, 11.5%, 12%);
+    
+
+  &.mustShow {
+    animation: ${mustShowKeyframes} ${milliseconsToUse} linear;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+  &.mustHide {
+    animation: ${mustHideKeyframes} ${milliseconsToUse} linear forwards;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
+    /* opacity:0; */
+  }
 
   & > :nth-child(1) {
     display: none;
@@ -23,7 +65,7 @@ export const NavbarWrapper = styled.nav`
     margin-inline: 32px;
     justify-content: center;
     gap: 16px;
-    
+
     & > li {
       display: flex;
       justify-content: center;
@@ -55,8 +97,8 @@ export const NavbarWrapper = styled.nav`
         align-items: center;
       }
     }
-    
-    .active{
+
+    .active {
       color: ${PRIMARY.PRIMARY_LIGHT};
       border: 2px solid ${PRIMARY.PRIMARY_LIGHT};
     }
@@ -102,15 +144,12 @@ export const NavbarWrapper = styled.nav`
         border: 2px solid transparent;
         border-radius: 0px;
       }
-      
-      .active{
+
+      .active {
         background-color: ${SECONDARY.SECONDARY_LIGHT};
-        color:black;
-        border:2px solid transparent
+        color: black;
+        border: 2px solid transparent;
       }
-      
-      
-      
     }
   }
 `
