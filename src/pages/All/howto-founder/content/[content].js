@@ -6,17 +6,17 @@ import { DynamicFunction } from "../../../../../utils/GetDynamicImport.js"
 
 const Dinamyc = () => {
   const router = useRouter()
-  const [dataToShow, setdataToShow] = useState()
+  const [dataToShow, setDataToShow] = useState()
 
   useEffect(() => {
     if (router.query.content !== undefined && router.query.content >= 0 && router.query.content <= 19) {
       DynamicFunction({ moduleName: router.query.content, functionName: router.query.content }).then(
         (dynamicDataImported) => {
-          setdataToShow(dynamicDataImported)
+          setDataToShow(dynamicDataImported)
         }
       )
     } else {
-      setdataToShow()
+      setDataToShow()
     }
   }, [router.query.content])
 
@@ -44,6 +44,7 @@ const Dinamyc = () => {
       </>
     )
   }
+
 
   return (
     <>

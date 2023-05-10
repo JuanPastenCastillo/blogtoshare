@@ -3,6 +3,56 @@ import styled from "styled-components"
 export const PostArticleWrapper = styled.div`
   padding: 2rem;
 
+  color: #fff;
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    position: relative;
+    display: flex;
+    /* border: 2px solid crimson; */
+
+    /* align-items: center; */
+    /* justify-content: center; */
+  }
+
+  h2:hover,
+  h3:hover,
+  h4:hover,
+  h5:hover,
+  h6:hover {
+    text-decoration: solid underline white 4px;
+    cursor: pointer;
+  }
+  h2 > :nth-child(1),
+  h3 > :nth-child(1),
+  h4 > :nth-child(1),
+  h5 > :nth-child(1),
+  h6 > :nth-child(1) {
+    visibility: hidden;
+    margin-left: 8px;
+  }
+
+  h2:hover > :nth-child(1),
+  h3:hover > :nth-child(1),
+  h4:hover > :nth-child(1),
+  h5:hover > :nth-child(1),
+  h6:hover > :nth-child(1) {
+    visibility: visible;
+  }
+
+  h2 > :nth-child(1):hover,
+  h3 > :nth-child(1):hover,
+  h4 > :nth-child(1):hover,
+  h5 > :nth-child(1):hover,
+  h6 > :nth-child(1):hover {
+    path {
+      fill: cornflowerblue;
+    }
+  }
+
   & > :nth-child(1) {
     position: sticky;
     top: 0;
@@ -34,13 +84,11 @@ export const PostArticleWrapper = styled.div`
       margin-bottom: 0;
     }
   }
-  
-  @media (max-width:382px) {
-    .LikePoem{
+
+  @media (max-width: 382px) {
+    .LikePoem {
       justify-items: start;
     }
-    
-    
   }
 
   & > :last-child {

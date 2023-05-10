@@ -75,7 +75,7 @@ Mistakes also, errors are also a teacher. Life is a learning process: whether yo
       "— Jorge Iván Carvajal Posada"
     ]
   ],
-  [`title3`, [`80% of our health is in our hands`]],
+  [`title3`, [`The 80% of our health is in our hands`]],
   [
     `quote`,
     [

@@ -1,8 +1,23 @@
+import { useRouter } from "next/router.js"
 import { Fragment } from "react"
+import { PermaLinkSVG } from "../../assets/icons/index.js"
+import { formatIdTitle } from "../../utils/formatIdTitle.js"
 import { BackComponent } from "../back/BackComponent.js"
 import { PostArticleWrapper } from "./styles/PostArticleWrapper.js"
 
 export const PostArticle = ({ dataToShow, numberPost = "" }) => {
+  const router = useRouter()
+
+  const handleSectionClick = (id) => {
+    const element = document.getElementById(id)
+    const toMoveHere = element.getBoundingClientRect().top + window.pageYOffset + 1
+    window.scrollTo({ top: toMoveHere, behavior: "smooth" })
+  }
+
+  const handlePermaLink = (id) => {
+    router.push(`#${id}`)
+  }
+
   return (
     <PostArticleWrapper>
       <BackComponent />
@@ -14,7 +29,6 @@ export const PostArticle = ({ dataToShow, numberPost = "" }) => {
       ) : null}
 
       {dataToShow.theData.map((x, i) => {
-
         if (x[0].toLowerCase() === "introduction" || x[0].toLowerCase() === "content") {
           if (Array.isArray(x[1])) {
             return (
@@ -109,7 +123,6 @@ export const PostArticle = ({ dataToShow, numberPost = "" }) => {
         }
 
         if (x[0].toLowerCase() === "likepoem") {
-          console.log("💖", x)
           if (Array.isArray(x[1])) {
             return (
               <div
@@ -121,23 +134,74 @@ export const PostArticle = ({ dataToShow, numberPost = "" }) => {
               </div>
             )
           }
-
         }
+
+        const titleToId = formatIdTitle(x[1])
 
         if (x[0].toLowerCase() === "title2") {
-          return <h2 key={`${x[0]}_${i}`}>{x[1]}</h2>
+          return (
+            <h2
+              onClick={() => handleSectionClick(titleToId)}
+              id={titleToId}
+              key={`${x[0]}_${i}`}>
+              {x[1]}
+              <span onClick={() => handlePermaLink(titleToId)}>
+                <PermaLinkSVG />
+              </span>
+            </h2>
+          )
         }
         if (x[0].toLowerCase() === "title3") {
-          return <h3 key={`${x[0]}_${i}`}>{x[1]}</h3>
+          return (
+            <h3
+              onClick={() => handleSectionClick(titleToId)}
+              id={titleToId}
+              key={`${x[0]}_${i}`}>
+              {x[1]}
+              <span onClick={() => handlePermaLink(titleToId)}>
+                <PermaLinkSVG />
+              </span>
+            </h3>
+          )
         }
         if (x[0].toLowerCase() === "title4") {
-          return <h4 key={`${x[0]}_${i}`}>{x[1]}</h4>
+          return (
+            <h4
+              onClick={() => handleSectionClick(titleToId)}
+              id={titleToId}
+              key={`${x[0]}_${i}`}>
+              {x[1]}
+              <span onClick={() => handlePermaLink(titleToId)}>
+                <PermaLinkSVG />
+              </span>
+            </h4>
+          )
         }
         if (x[0].toLowerCase() === "title5") {
-          return <h5 key={`${x[0]}_${i}`}>{x[1]}</h5>
+          return (
+            <h5
+              onClick={() => handleSectionClick(titleToId)}
+              id={titleToId}
+              key={`${x[0]}_${i}`}>
+              {x[1]}
+              <span onClick={() => handlePermaLink(titleToId)}>
+                <PermaLinkSVG />
+              </span>
+            </h5>
+          )
         }
         if (x[0].toLowerCase() === "title6") {
-          return <h6 key={`${x[0]}_${i}`}>{x[1]}</h6>
+          return (
+            <h6
+              onClick={() => handleSectionClick(titleToId)}
+              id={titleToId}
+              key={`${x[0]}_${i}`}>
+              {x[1]}
+              <span onClick={() => handlePermaLink(titleToId)}>
+                <PermaLinkSVG />
+              </span>
+            </h6>
+          )
         }
         return (
           <div key={`${i}`}>

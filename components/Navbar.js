@@ -1,8 +1,10 @@
 import Link from "next/link.js"
 import { useRouter } from "next/router.js"
-import { useEffect, useState } from "react"
+import { useEffect, useLayoutEffect, useState } from "react"
 import { BarResponsiveMenuSVG } from "../assets/icons/index.js"
 import { NavbarWrapper } from "./styles/NavbarWrapper.js"
+
+const renderNumber = 1
 
 export const Navbar = () => {
   const [navExpanded, setNavExpanded] = useState(false)
@@ -11,18 +13,16 @@ export const Navbar = () => {
     setNavExpanded((prevState) => !prevState)
   }
 
-  const router = useRouter()
-  const { pathname } = router
+  const { pathname, asPath, isReady } = useRouter()
 
   const checkPathnameAll = /[All]\/\w|[All]/.test(pathname) ? "active" : null
 
   const [prevScrollY, setPrevScrollY] = useState(0)
   const [mustShow, setMustShow] = useState(true)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY
-
       if (currentScrollY > prevScrollY && prevScrollY >= 46) {
         setMustShow(false)
       } else {
@@ -41,14 +41,19 @@ export const Navbar = () => {
     }
   }, [prevScrollY])
 
+  useEffect(() => {
+    if (asPath.includes("#")) {
+      setMustShow(false)
+    }
+  }, [asPath])
+
 
   return (
     <NavbarWrapper
       navExpanded={navExpanded}
       mustShow={mustShow}
       className={mustShow ? "mustShow" : "mustHide"}
-      shouldSticky={prevScrollY < 51 && "shouldSticky"}
-    >
+      shouldSticky={prevScrollY < 51 && "shouldSticky"}>
       <BarResponsiveMenuSVG onClick={handleNavExpanded} />
       <ul>
         <li className={pathname === "/" ? "active" : null}>

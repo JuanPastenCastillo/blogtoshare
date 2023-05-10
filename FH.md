@@ -26,29 +26,37 @@ dynamic page to the previous one, the page should not go to top automatically, s
     this with smooth animations.
 
   - ❌ In the [conent].js file when the user scroll down a little bit, a button to go up should display.
-    <!-- Is not neccesary -->
-  - Make the Back Component be visible all the time
-  - Every title should have a little way to click on it and change the URL for the next time you visit the page, the
+      <!-- Is not neccesary -->
+
+    ✅- Make the Back Component be visible all the time
+
+  - ✅ Every title should have a little way to click on it and change the URL for the next time you visit the page, the
     user can use that URL and move the view of the user to that exactly part of the page. For example, in this page:
     https://developer.mozilla.org/en-US/docs/Web/javascript you can have this URL
     https://developer.mozilla.org/en-US/docs/Web/javascript#advanced to enter a specific part of the page
 
-- Add accessibility feature:
+- Make the pages can be readable in lecture mode in:
 
-* The component should be able to show and hide
-* Font-size
-* Letter spacing
-* Line height
-* Font style
-* Margin lef and right
-* Zoom in and zoom out
-* Color: light, dark, sepia
+  - Ddge
+  - Opera
+  - Brave
+
+- 👀Add accessibility feature:
+
+  - The component should be able to show and hide
+  - Font-size
+  - Letter spacing
+  - Line height
+  - Font style
+  - Margin lef and right
+  - Zoom in and zoom out
+  - Color: light, dark, sepia
 
 - Create About this page, contact and footer
 
 - Create good looking UI
 
-- Centralize the first "key" of DATA_TO_SHOW array
+- Centralize the first "key" of DATA_TO_SHOW array <!-- What does this mean? -->
 
 - Make all the page be navigable with arrow key, tab, enter key, specially the "Accessibility feature" and everything
   else.
