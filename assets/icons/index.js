@@ -48,3 +48,22 @@ export const PermaLinkSVG = (props) => (
     />
   </svg>
 )
+
+export const AccessibilityIconSVG = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={44}
+    height={44}
+    fill="none"
+    stroke="#2c3e50"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={1.5}
+    className="icon icon-tabler icon-tabler-letter-case"
+    viewBox="0 0 24 24"
+    {...props}
+  >
+    <path stroke="none" d="M0 0h24v24H0z" />
+    <path d="M14 15.5a3.5 3.5 0 1 0 7 0 3.5 3.5 0 1 0-7 0M3 19V8.5a3.5 3.5 0 0 1 7 0V19M3 13h7M21 12v7" />
+  </svg>
+)

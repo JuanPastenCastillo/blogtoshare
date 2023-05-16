@@ -1,7 +1,8 @@
 import Link from "next/link.js"
 import { useRouter } from "next/router.js"
-import { useEffect, useLayoutEffect, useState } from "react"
+import { useEffect, useLayoutEffect, useRef, useState } from "react"
 import { BarResponsiveMenuSVG } from "../assets/icons/index.js"
+import { useHeightNavbar_Ctx } from "../context/HeightNavbarContext.js"
 import { NavbarWrapper } from "./styles/NavbarWrapper.js"
 
 const renderNumber = 1
@@ -20,12 +21,12 @@ export const Navbar = () => {
   const [prevScrollY, setPrevScrollY] = useState(0)
   const [mustShow, setMustShow] = useState(true)
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY
       if (currentScrollY > prevScrollY && prevScrollY >= 46) {
         setMustShow(false)
-      } else {
+      } else if (asPath.includes("#")) {
         setMustShow(true)
       }
 
@@ -39,21 +40,23 @@ export const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll)
     }
-  }, [prevScrollY])
+  }, [prevScrollY, asPath])
 
-  useEffect(() => {
-    if (asPath.includes("#")) {
-      setMustShow(false)
-    }
-  }, [asPath])
+  const { setHeightNavbar } = useHeightNavbar_Ctx()
 
+  const refNavbar = useRef()
+
+  useLayoutEffect(() => {
+    setHeightNavbar(refNavbar.current.clientHeight)
+  }, [refNavbar])
 
   return (
     <NavbarWrapper
       navExpanded={navExpanded}
       mustShow={mustShow}
       className={mustShow ? "mustShow" : "mustHide"}
-      shouldSticky={prevScrollY < 51 && "shouldSticky"}>
+      shouldSticky={prevScrollY < 51 && "shouldSticky"}
+      ref={refNavbar}>
       <BarResponsiveMenuSVG onClick={handleNavExpanded} />
       <ul>
         <li className={pathname === "/" ? "active" : null}>

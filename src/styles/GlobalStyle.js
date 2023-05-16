@@ -5,6 +5,9 @@ export const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  /* font-size: 16px; */
+  /* letter-spacing: 1px; */
+  /* line-height: 28px; */
 }
 
 html,

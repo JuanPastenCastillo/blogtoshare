@@ -35,32 +35,35 @@ dynamic page to the previous one, the page should not go to top automatically, s
     https://developer.mozilla.org/en-US/docs/Web/javascript you can have this URL
     https://developer.mozilla.org/en-US/docs/Web/javascript#advanced to enter a specific part of the page
 
-- Make the pages can be readable in lecture mode in:
+0. ❌Make the pages can be readable in lecture mode in:
 
-  - Ddge
-  - Opera
-  - Brave
+❌- Edge ❌- Opera ❌- Brave
 
-- 👀Add accessibility feature:
+1. Add accessibility feature:
 
-  - The component should be able to show and hide
-  - Font-size
-  - Letter spacing
-  - Line height
-  - Font style
-  - Margin lef and right
-  - Zoom in and zoom out
-  - Color: light, dark, sepia
+- The component should be able to show and hide
+- Font-size
+- Letter spacing
+- Line height
+- Font style
+- Margin lef and right
+- Zoom in and zoom out
+- Color: light, dark, sepia
 
-- Create About this page, contact and footer
+2. Create About this page, contact and footer
 
-- Create good looking UI
+3. Create good looking UI
 
-- Centralize the first "key" of DATA_TO_SHOW array <!-- What does this mean? -->
+4. Centralize the first "key" of DATA_TO_SHOW array <!-- What does this mean? -->
 
-- Make all the page be navigable with arrow key, tab, enter key, specially the "Accessibility feature" and everything
-  else.
+5. Make all the page be navigable with arrow key, tab, enter key, specially the "Accessibility feature" and everything
+   else.
 
-- Check the grammar of every content of How to Founder.
+6. Check the mobile version, is everything okay?
+<!-- Maybe in mobile version, the PermaLinkSVG icon should be visible all the time -->
 
-- Share it in twitter
+7. Change the fav icon of the webpage for other thing
+
+8. Check the grammar of every content of How to Founder.
+
+9. Share it in twitter

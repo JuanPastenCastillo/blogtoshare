@@ -1,6 +1,7 @@
 import { useRouter } from "next/router.js"
 import { Fragment } from "react"
 import { PermaLinkSVG } from "../../assets/icons/index.js"
+import { useHeightNavbar_Ctx } from "../../context/HeightNavbarContext.js"
 import { formatIdTitle } from "../../utils/formatIdTitle.js"
 import { BackComponent } from "../back/BackComponent.js"
 import { PostArticleWrapper } from "./styles/PostArticleWrapper.js"
@@ -8,9 +9,11 @@ import { PostArticleWrapper } from "./styles/PostArticleWrapper.js"
 export const PostArticle = ({ dataToShow, numberPost = "" }) => {
   const router = useRouter()
 
+  const { heightNavbar } = useHeightNavbar_Ctx()
+
   const handleSectionClick = (id) => {
     const element = document.getElementById(id)
-    const toMoveHere = element.getBoundingClientRect().top + window.pageYOffset + 1
+    const toMoveHere = element.getBoundingClientRect().top + window.pageYOffset - heightNavbar
     window.scrollTo({ top: toMoveHere, behavior: "smooth" })
   }
 
@@ -19,7 +22,7 @@ export const PostArticle = ({ dataToShow, numberPost = "" }) => {
   }
 
   return (
-    <PostArticleWrapper>
+    <PostArticleWrapper heightNavbar={heightNavbar}>
       <BackComponent />
       <h1>{dataToShow.title}</h1>
       {numberPost ? (

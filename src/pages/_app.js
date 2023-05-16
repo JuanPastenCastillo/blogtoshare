@@ -1,6 +1,7 @@
 import Head from "next/head"
 import { Fragment } from "react"
 import { Layout } from "../../components/Layout"
+import { HeightNavbarContext_Provider } from "../../context/HeightNavbarContext"
 import { UserView_Provider } from "../../context/UserViewContext"
 import { GlobalStyle } from "../styles/GlobalStyle"
 
@@ -12,11 +13,13 @@ export default function App({ Component, pageProps }) {
       </Head>
       <GlobalStyle />
 
-      <UserView_Provider>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </UserView_Provider>
+      <HeightNavbarContext_Provider>
+        <UserView_Provider>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </UserView_Provider>
+      </HeightNavbarContext_Provider>
     </Fragment>
   )
 }

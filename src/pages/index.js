@@ -1,13 +1,11 @@
-import { Welcome } from '../../components/Welcome.js'
 import { Fragment } from 'react'
+import { Welcome } from '../../components/Welcome.js'
 
 
 export default function Home() {
   return (
     <Fragment>
-      <main >
-        <Welcome/>
-      </main>
+      <Welcome />
     </Fragment>
   )
 }
