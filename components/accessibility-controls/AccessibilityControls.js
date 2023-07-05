@@ -6,7 +6,7 @@ import { AccessibilityControlsWrapper } from "./styles/AccessibilityControlsWrap
 const nameToCloseTheFilters = "nameToCloseTheFilters-AccessibilityControls"
 
 export const AccessibilityControls = ({ setFontSize }) => {
-  const [show, setShow] = useState(true)
+  const [show, setShow] = useState(false)
   const handleShow = () => {
     setShow((prevState) => !prevState)
   }
@@ -15,6 +15,16 @@ export const AccessibilityControls = ({ setFontSize }) => {
   const getWidthRef = useRef(null)
   const widthElementToShowAndHide = useRef(null)
 
+  useEffect(() => {
+    const handleResize = () => {
+      const width = getWidthRef.current.offsetWidth
+      setWidthParent(width)
+    }
+
+    window.addEventListener("resize", handleResize)
+
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
 
   useEffect(() => {
     const width = getWidthRef.current.offsetWidth
@@ -43,7 +53,6 @@ export const AccessibilityControls = ({ setFontSize }) => {
     }
   }, [show])
 
-
   return (
     <AccessibilityControlsWrapper
       show={show}
@@ -51,11 +60,7 @@ export const AccessibilityControls = ({ setFontSize }) => {
       widthParent={widthParent}
       widthElementToShowAndHide={widthElementToShowAndHide.current?.clientWidth}
       className={nameToCloseTheFilters}>
-      <AccessibilityControls_TextSize
-        setFontSize={setFontSize}
-      />
-
-
+      <AccessibilityControls_TextSize setFontSize={setFontSize} />
 
       {/* <p>Letter spacing [plus and less]</p>
       <p>Word spacing [plus and less]</p>

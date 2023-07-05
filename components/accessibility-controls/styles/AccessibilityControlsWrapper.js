@@ -12,7 +12,7 @@ export const AccessibilityControlsWrapper = styled.div`
   background-image: linear-gradient(hsl(220.9, 39.3%, 11%), hsl(215, 13.8%, 14.1%));
 
   width: 91vw;
-  aspect-ratio: 2/1;
+  aspect-ratio: 3/1;
 
   * {
     font-size: 22px !important;
