@@ -1,9 +1,13 @@
 import styled from "styled-components"
 
 export const PostArticleWrapper = styled.div`
+  /* 
+!FH
+This padding should be thinked in order to have a good read
+*/
   padding: 2rem;
-
   color: #fff;
+  overflow-x: hidden;
 
   h2,
   h3,
@@ -12,20 +16,7 @@ export const PostArticleWrapper = styled.div`
   h6 {
     position: relative;
     display: flex;
-    /* height: calc(100% - 120px); */
-    /* margin-top: 120px; */
     scroll-margin-top: ${({ heightNavbar }) => `${heightNavbar + 10}px`};
-    /* scroll-margin-top: 67px; */
-    
-    /* 
-    !FH1 Fix this, make the behavior of the permalink only one feature, not two
-    */
-    
-    
-    /* border: 2px solid crimson; */
-
-    /* align-items: center; */
-    /* justify-content: center; */
   }
 
   h2:hover,

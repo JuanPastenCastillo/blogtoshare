@@ -4,32 +4,51 @@ export const AccessibilityControlsWrapper = styled.div`
   border: 2px solid white;
 
   position: fixed;
-  bottom: 0;
-  right: ${({ show, width }) => (show && width ? `0` : `-${width}px`)};
+  bottom: 0px;
+  right: ${({ show, widthParent }) => (show && widthParent ? `0` : `-${widthParent}px`)};
 
   visibility: ${({ show }) => (show ? `visible` : `hidden`)};
 
   background-image: linear-gradient(hsl(220.9, 39.3%, 11%), hsl(215, 13.8%, 14.1%));
 
-  /* z-index:3; */
+  width: 91vw;
+  aspect-ratio: 2/1;
 
-  & > :nth-child(1){
-    display: flex;
-    /* align-items: center; */
-    justify-content: center;
-    flex-direction:column;
-    
+  * {
+    font-size: 22px !important;
+    letter-spacing: normal !important;
+    word-spacing: normal !important;
+    line-height: normal !important;
   }
-  
-  
-  & > button {
+
+  & > :last-child {
     cursor: pointer;
     visibility: visible;
     position: absolute;
-    left: ${({ accessibilityIconWidth, show }) =>
-    show ? `-${accessibilityIconWidth + 10}px` : `-${accessibilityIconWidth}px`};
+
+    left: ${({ widthElementToShowAndHide, show }) =>
+    show ? `-${widthElementToShowAndHide}px` : `-${widthElementToShowAndHide}px`};
+
+    border: none;
+    padding: 4px;
+
+    fill: ${({ show }) => (show ? `#00ddff` : ``)};
+    background-color: ${({ show }) => show && `hsl(240, 5.7%, 17.8%)`};
+    border-radius: 8px;
 
     bottom: ${({ show }) => (show ? `0px` : `-5px`)};
+
+    &:hover {
+      filter: brightness(95%);
+    }
+
+    & > :nth-child(1) {
+      /* border: 2px solid green; */
+
+      /* display: flex; */
+      /* align-items: center; */
+      /* justify-content: center; */
+    }
 
     /* z-index: -1; */
     /* border:none; */

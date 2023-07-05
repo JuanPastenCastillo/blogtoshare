@@ -1,6 +1,6 @@
 import Link from "next/link.js"
 import { useRouter } from "next/router.js"
-import { useEffect, useLayoutEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { BarResponsiveMenuSVG } from "../assets/icons/index.js"
 import { useHeightNavbar_Ctx } from "../context/HeightNavbarContext.js"
 import { NavbarWrapper } from "./styles/NavbarWrapper.js"
@@ -26,7 +26,7 @@ export const Navbar = () => {
       const currentScrollY = window.scrollY
       if (currentScrollY > prevScrollY && prevScrollY >= 46) {
         setMustShow(false)
-      } else if (asPath.includes("#")) {
+      } else {
         setMustShow(true)
       }
 
@@ -46,7 +46,7 @@ export const Navbar = () => {
 
   const refNavbar = useRef()
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     setHeightNavbar(refNavbar.current.clientHeight)
   }, [refNavbar])
 

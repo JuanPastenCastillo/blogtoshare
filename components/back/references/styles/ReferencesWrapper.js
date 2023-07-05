@@ -3,6 +3,8 @@ import styled from "styled-components"
 export const ReferencesWrapper = styled.div`
   padding-inline: 2.8rem;
   margin-bottom: 36px;
+  
+  overflow-x: hidden;
 
   &.linkRecoveryFrom:visited {
     color: cornflowerblue;

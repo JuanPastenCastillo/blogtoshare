@@ -46,24 +46,29 @@ dynamic page to the previous one, the page should not go to top automatically, s
 - Letter spacing
 - Line height
 - Font style
-- Margin lef and right
-- Zoom in and zoom out
+- Margin lef and right ❌- Zoom in and zoom out
 - Color: light, dark, sepia
+- The accessibility feature have a full width and height toggle button
+- The accessibility feature should be able be used with keboard: access to the feature and navigate on that
 
-2. Create About this page, contact and footer
+2. Create a feature that allow people download the content of a page: in pdf, plain text and markdown
 
-3. Create good looking UI
+3. Create About this page, contact and footer
 
-4. Centralize the first "key" of DATA_TO_SHOW array <!-- What does this mean? -->
+4. Create good looking UI
 
-5. Make all the page be navigable with arrow key, tab, enter key, specially the "Accessibility feature" and everything
+5. Centralize the first "key" of DATA_TO_SHOW array <!-- What does this mean? -->
+
+6. Make all the page be navigable with arrow key, tab, enter key, specially the "Accessibility feature" and everything
    else.
 
-6. Check the mobile version, is everything okay?
+7. Check the mobile version, is everything okay?
 <!-- Maybe in mobile version, the PermaLinkSVG icon should be visible all the time -->
 
-7. Change the fav icon of the webpage for other thing
+8. Change the fav icon of the webpage for other thing
 
-8. Check the grammar of every content of How to Founder.
+9. Check the grammar of every content of How to Founder.
 
-9. Share it in twitter
+10. Share it in twitter
+
+11. Keep with the codeRoadmap
