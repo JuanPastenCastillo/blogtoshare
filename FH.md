@@ -41,9 +41,10 @@ dynamic page to the previous one, the page should not go to top automatically, s
 
 1. Add accessibility feature:
 
-- The component should be able to show and hide
-- Font-size
-- Letter spacing
+✅- The component should be able to show and hide
+✅- Font-size
+👀- Letter spacing
+
 - Line height
 - Font style
 - Margin lef and right ❌- Zoom in and zoom out
