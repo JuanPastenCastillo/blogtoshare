@@ -48,9 +48,13 @@ h2{
   font-size:${({ fontSize }) => fontSize && `${fontSize.h2}`};
 }
 
-h3,h4, h5, h6{
+h3,h4,h5,h6{
   margin-bottom: 0.3rem;
   font-size:${({ fontSize }) => fontSize && `${fontSize.h3h4h5h6}`};
+}
+
+*:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6){
+  font-size:${({ fontSize }) => `${fontSize.p}`};
 }
 
 
@@ -65,7 +69,6 @@ h1,h2,h3,h4,h5,h6{
 }
 
 h4, h5, h6{
-  font-size: 19px;
   font-style: italic;
 }
 
@@ -86,9 +89,7 @@ p{
   
 }
 
-*:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6){
-  font-size:${({ fontSize }) => `${fontSize.p}`};
-}
+
 
   
 
