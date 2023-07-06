@@ -43,7 +43,7 @@ dynamic page to the previous one, the page should not go to top automatically, s
 
 ✅- The component should be able to show and hide
 ✅- Font-size
-👀- Letter spacing, ⌛ignore this?
+👀- Letter spacing
 
 - Line height
 - Font style

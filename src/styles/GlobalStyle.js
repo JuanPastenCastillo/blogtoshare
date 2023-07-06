@@ -5,17 +5,13 @@ export const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  
-  /* overflow-x: hidden; */
-  
-  
-   /*  here the font-size */
-   /* font-size: 1.07 */
-   
-   
    
    /* Add here the letter spacing */ 
    /* letter-spacing: 0.12em; */
+   
+   letter-spacing: ${({ letterSpacing }) => letterSpacing};
+   
+   
    
    /* Add here the word-spacing */
    /* word-spacing: 0.5em; */

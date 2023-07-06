@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from "react"
 import { TextPreferencesSVG } from "../../assets/icons/index.js"
+import { AccessibilityControls_LetterSpacing } from './AccessibilityControls_LetterSpacing.js'
 import { AccessibilityControls_TextSize } from "./AccessibilityControls_TextSize.js"
 import { AccessibilityControlsWrapper } from "./styles/AccessibilityControlsWrapper.js"
 
 const nameToCloseTheFilters = "nameToCloseTheFilters-AccessibilityControls"
 
-export const AccessibilityControls = ({ setFontSize }) => {
+export const AccessibilityControls = ({ setFontSize, setLetterSpacing }) => {
   const [show, setShow] = useState(false)
   const handleShow = () => {
     setShow((prevState) => !prevState)
@@ -60,7 +61,11 @@ export const AccessibilityControls = ({ setFontSize }) => {
       widthParent={widthParent}
       widthElementToShowAndHide={widthElementToShowAndHide.current?.clientWidth}
       className={nameToCloseTheFilters}>
+
       <AccessibilityControls_TextSize setFontSize={setFontSize} />
+
+      <AccessibilityControls_LetterSpacing setLetterSpacing={setLetterSpacing}
+      />
 
       {/* <p>Letter spacing [plus and less]</p>
       <p>Word spacing [plus and less]</p>

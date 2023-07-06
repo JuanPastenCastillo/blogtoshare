@@ -14,8 +14,7 @@ export default function App({ Component, pageProps }) {
     h3h4h5h6: CALCULATED_CONST_ACCESSIBILITY.h3h4h5h6[CONST_ACCESSIBILITY_RULES.textHowMuchChanges.initialValueIndex]
   })
 
-  const [letterSpacing, setLetterSpacing] = useState(CALCULATED_CONST_ACCESSIBILITY.letterSpacing)
-
+  const [letterSpacing, setLetterSpacing] = useState(CALCULATED_CONST_ACCESSIBILITY.letterSpacing.default)
 
   return (
     <Fragment>
@@ -25,8 +24,13 @@ export default function App({ Component, pageProps }) {
 
       <HeightNavbarContext_Provider>
         <UserView_Provider>
-          <Layout setFontSize={setFontSize}>
-            <GlobalStyle fontSize={fontSize} />
+          <Layout
+            setFontSize={setFontSize}
+            setLetterSpacing={setLetterSpacing}>
+            <GlobalStyle
+              fontSize={fontSize}
+              letterSpacing={letterSpacing}
+            />
             <Component {...pageProps} />
           </Layout>
         </UserView_Provider>
@@ -34,16 +38,3 @@ export default function App({ Component, pageProps }) {
     </Fragment>
   )
 }
-
-/* 
-
-!FH-1
-
-Android Text to Speech
-https://youtu.be/Ka5AdeLt43o
-
-iPhone:
-https://youtu.be/DC6jjLOpaJ0
-
-https://apps.apple.com/us/app/text-to-speech/id322329515
-*/

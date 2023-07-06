@@ -4,6 +4,7 @@ export const AccessibilityControlsWrapper = styled.div`
   border: 2px solid white;
 
   position: fixed;
+  z-index:2;
   bottom: 0px;
   right: ${({ show, widthParent }) => (show && widthParent ? `0` : `-${widthParent}px`)};
 
@@ -13,6 +14,7 @@ export const AccessibilityControlsWrapper = styled.div`
 
   width: 91vw;
   aspect-ratio: 3/1;
+  
 
   * {
     font-size: 22px !important;

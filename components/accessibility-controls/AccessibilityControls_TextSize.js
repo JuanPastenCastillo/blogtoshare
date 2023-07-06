@@ -58,7 +58,9 @@ export const AccessibilityControls_TextSize = ({
         <span onClick={DOWN}>
           <MinusSVG />
         </span>
+
         <span>{initialStep + 1}</span>
+
         <span onClick={UP}>
           <PlusSVG />
         </span>
