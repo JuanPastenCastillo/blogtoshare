@@ -4,7 +4,7 @@ export const AccessibilityControlsWrapper = styled.div`
   border: 2px solid white;
 
   position: fixed;
-  z-index:2;
+  z-index: 2;
   bottom: 0px;
   right: ${({ show, widthParent }) => (show && widthParent ? `0` : `-${widthParent}px`)};
 
@@ -14,7 +14,11 @@ export const AccessibilityControlsWrapper = styled.div`
 
   width: 91vw;
   aspect-ratio: 3/1;
-  
+
+  font-size: 22px !important;
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
+  line-height: normal !important;
 
   * {
     font-size: 22px !important;
@@ -43,16 +47,5 @@ export const AccessibilityControlsWrapper = styled.div`
     &:hover {
       filter: brightness(95%);
     }
-
-    & > :nth-child(1) {
-      /* border: 2px solid green; */
-
-      /* display: flex; */
-      /* align-items: center; */
-      /* justify-content: center; */
-    }
-
-    /* z-index: -1; */
-    /* border:none; */
   }
 `

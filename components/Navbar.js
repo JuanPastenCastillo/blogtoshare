@@ -5,8 +5,6 @@ import { BarResponsiveMenuSVG } from "../assets/icons/index.js"
 import { useHeightNavbar_Ctx } from "../context/HeightNavbarContext.js"
 import { NavbarWrapper } from "./styles/NavbarWrapper.js"
 
-const renderNumber = 1
-
 export const Navbar = () => {
   const [navExpanded, setNavExpanded] = useState(false)
 

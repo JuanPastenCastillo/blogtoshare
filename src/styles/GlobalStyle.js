@@ -9,10 +9,6 @@ export const GlobalStyle = createGlobalStyle`
    /* Add here the letter spacing */ 
    /* letter-spacing: 0.12em; */
    
-   letter-spacing: ${({ letterSpacing }) => letterSpacing};
-   
-   
-   
    /* Add here the word-spacing */
    /* word-spacing: 0.5em; */
    
@@ -25,6 +21,10 @@ export const GlobalStyle = createGlobalStyle`
   /* Add here the font-family */
   font-family: 'Space Grotesk'; 
   
+}
+
+*{
+  letter-spacing: ${({ letterSpacing }) => letterSpacing};
 }
 
 html,
@@ -53,12 +53,9 @@ h3,h4,h5,h6{
   font-size:${({ fontSize }) => `${fontSize.p}`};
 }
 
-
 h4,h5,h6{
   margin-left: 48px;
 }
-
-
 
 h1,h2,h3,h4,h5,h6{
    font-weight: 800;

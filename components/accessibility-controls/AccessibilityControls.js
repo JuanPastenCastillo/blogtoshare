@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 import { TextPreferencesSVG } from "../../assets/icons/index.js"
-import { AccessibilityControls_LetterSpacing } from './AccessibilityControls_LetterSpacing.js'
+import { useOutsideHide } from "../../utils/useOutsideHide.js"
+import { AccessibilityControls_LetterSpacing } from "./AccessibilityControls_LetterSpacing.js"
 import { AccessibilityControls_TextSize } from "./AccessibilityControls_TextSize.js"
 import { AccessibilityControlsWrapper } from "./styles/AccessibilityControlsWrapper.js"
 
@@ -32,27 +33,7 @@ export const AccessibilityControls = ({ setFontSize, setLetterSpacing }) => {
     setWidthParent(width)
   }, [])
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (show && !event.target.closest(`.${nameToCloseTheFilters}`)) {
-        setShow(false)
-      }
-    }
-
-    const handleScroll = () => {
-      if (show) {
-        setShow(false)
-      }
-    }
-
-    window.addEventListener("mousedown", handleClickOutside)
-    window.addEventListener("scroll", handleScroll)
-
-    return () => {
-      window.removeEventListener("mousedown", handleClickOutside)
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [show])
+  useOutsideHide(getWidthRef, setShow)
 
   return (
     <AccessibilityControlsWrapper
@@ -61,11 +42,9 @@ export const AccessibilityControls = ({ setFontSize, setLetterSpacing }) => {
       widthParent={widthParent}
       widthElementToShowAndHide={widthElementToShowAndHide.current?.clientWidth}
       className={nameToCloseTheFilters}>
-
       <AccessibilityControls_TextSize setFontSize={setFontSize} />
 
-      <AccessibilityControls_LetterSpacing setLetterSpacing={setLetterSpacing}
-      />
+      <AccessibilityControls_LetterSpacing setLetterSpacing={setLetterSpacing} />
 
       {/* <p>Letter spacing [plus and less]</p>
       <p>Word spacing [plus and less]</p>
