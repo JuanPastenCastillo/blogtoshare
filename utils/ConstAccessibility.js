@@ -27,8 +27,8 @@ export const CONST_ACCESSIBILITY_RULES = {
   letterSpacing: {
     default: "normal",
     from: 0.12,
-    to: 0.4,
-    steps: 9,
+    to: 0.6,
+    steps: 4,
     valueToUse: "em",
     name: "letterSpacing"
   },
