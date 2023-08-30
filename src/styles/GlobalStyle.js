@@ -7,13 +7,10 @@ export const GlobalStyle = createGlobalStyle`
   margin: 0;
   
   letter-spacing: ${({ letterSpacing }) => letterSpacing};
+  word-spacing: ${({ wordSpacing }) => wordSpacing};
   
+  line-height: ${({ lineHeight }) => lineHeight};
   
-   word-spacing: ${({ wordSpacing }) => wordSpacing};
-   
-   /* Add here the word-spacing */
-   /* word-spacing: 0.5em; */
-   
    /* Add here the line-height */
    /* line-height: 2.6em; */
   

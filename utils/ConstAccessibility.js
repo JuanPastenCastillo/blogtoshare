@@ -35,16 +35,16 @@ export const CONST_ACCESSIBILITY_RULES = {
   wordSpacing: {
     default: "normal",
     from: 0.5,
-    to: 2,
-    steps: 8,
+    to: 4,
+    steps: 9,
     valueToUse: "em",
     name: "wordSpacing"
   },
   lineHeight: {
     default: "normal",
     from: 1.6,
-    to: 2.6,
-    steps: 3,
+    to: 4.6,
+    steps: 9,
     valueToUse: "em",
     name: "lineHeight"
   },

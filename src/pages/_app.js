@@ -18,6 +18,8 @@ export default function App({ Component, pageProps }) {
 
   const [wordSpacing, setWordSpacing] = useState(CALCULATED_CONST_ACCESSIBILITY.wordSpacing.default)
 
+  const [lineHeight, setLineHeight] = useState(CALCULATED_CONST_ACCESSIBILITY.lineHeight.default)
+
   return (
     <Fragment>
       <Head>
@@ -30,11 +32,15 @@ export default function App({ Component, pageProps }) {
             setFontSize={setFontSize}
             setLetterSpacing={setLetterSpacing}
             setWordSpacing={setWordSpacing}
+            setLineHeight={setLineHeight}
+
           >
             <GlobalStyle
               fontSize={fontSize}
               letterSpacing={letterSpacing}
               wordSpacing={wordSpacing}
+              lineHeight={lineHeight}
+
             />
             <Component {...pageProps} />
           </Layout>
