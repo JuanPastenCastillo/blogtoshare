@@ -13,10 +13,14 @@ const nameToCloseTheFilters = "nameToCloseTheFilters-AccessibilityControls"
 export const AccessibilityControls = ({ setFontSize, setLetterSpacing, setWordSpacing, setLineHeight, setMarginIniline }) => {
   const [show, setShow] = useState(false)
 
+  const handleShow = () => {
+    setShow((prevState) => !prevState)
+  }
+
   useEffect(() => {
     const handleKeyPress = (event) => {
       if (event.shiftKey && event.key.toLowerCase() === 'a' || event.key === 'F1') {
-        setShow(true)
+        handleShow()
       }
     };
 
@@ -29,11 +33,6 @@ export const AccessibilityControls = ({ setFontSize, setLetterSpacing, setWordSp
 
 
   }, [])
-
-
-  const handleShow = () => {
-    setShow((prevState) => !prevState)
-  }
 
   const [widthParent, setWidthParent] = useState()
   const getWidthRef = useRef(null)
