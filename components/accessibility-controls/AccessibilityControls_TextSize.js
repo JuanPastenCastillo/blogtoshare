@@ -4,12 +4,12 @@ import { CALCULATED_CONST_ACCESSIBILITY, CONST_ACCESSIBILITY_RULES } from "../..
 import { AccessibilityControls_TextSizeWrapper } from "./styles/AccessibilityControls_TextSizeWrapper.js"
 
 export const AccessibilityControls_TextSize = ({
-  value,
-  setValue,
-  paragraphCalculated,
-  setParagraphCalculated,
-  textRules,
-  setTextRules,
+  // value,
+  // setValue,
+  // paragraphCalculated,
+  // setParagraphCalculated,
+  // textRules,
+  // setTextRules,
   setFontSize
 }) => {
   const [initialStep, setInitialStep] = useState(CONST_ACCESSIBILITY_RULES.textHowMuchChanges.initialValueIndex)

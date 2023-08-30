@@ -36,7 +36,7 @@ export const CONST_ACCESSIBILITY_RULES = {
     default: "normal",
     from: 0.5,
     to: 4,
-    steps: 9,
+    steps: 15,
     valueToUse: "em",
     name: "wordSpacing",
   },

@@ -12,6 +12,25 @@ const nameToCloseTheFilters = "nameToCloseTheFilters-AccessibilityControls"
 
 export const AccessibilityControls = ({ setFontSize, setLetterSpacing, setWordSpacing, setLineHeight, setMarginIniline }) => {
   const [show, setShow] = useState(false)
+
+  useEffect(() => {
+    const handleKeyPress = (event) => {
+      if (event.shiftKey && event.key.toLowerCase() === 'a' || event.key === 'F1') {
+        setShow(true)
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyPress);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyPress);
+    };
+
+
+
+  }, [])
+
+
   const handleShow = () => {
     setShow((prevState) => !prevState)
   }
