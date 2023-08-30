@@ -112,7 +112,82 @@ export const TextPreferencesSVG = (props) => (
   </svg>
 )
 
+
+export const FontSizeSVG = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    height="1em"
+    // fill="none"
+    // stroke="#2c3e50"
+    // strokeLinecap="round"
+    // strokeLinejoin="round"
+    // strokeWidth={3}
+    // className="icon icon-tabler icon-tabler-text-increase"
+    viewBox="0 0 24 24"
+    {...props}
+  >
+    <path stroke="none" d="M0 0h24v24H0z" />
+    <path d="M4 19V8.5a3.5 3.5 0 1 1 7 0V19M4 13h7M18 9v6M21 12h-6" />
+  </svg>
+)
+
 export const LetterSpacingSVG = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    height="1em"
+    // fill="none"
+    // stroke="#2c3e50"
+    // strokeLinecap="round"
+    // strokeLinejoin="round"
+    // strokeWidth={1.5}
+    // className="icon icon-tabler icon-tabler-letter-spacing"
+    viewBox="0 0 24 24"
+    {...props}
+  >
+    {/* <path stroke="none" d="M0 0h24v24H0z" /> */}
+    <path d="M5 12V6.5a2.5 2.5 0 0 1 5 0V12m0-4H5M13 4l3 8 3-8M5 18h14M17 20l2-2-2-2M7 16l-2 2 2 2" />
+  </svg>
+)
+
+
+export const WordSpacingSVG = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    height="1em"
+    // fill="none"
+    // stroke="#2c3e50"
+    // strokeLinecap="round"
+    // strokeLinejoin="round"
+    // strokeWidth={1.5}
+    // className="icon icon-tabler icon-tabler-spacing-horizontal"
+    viewBox="0 0 24 24"
+    {...props}
+  >
+    <path stroke="none" d="M0 0h24v24H0z" />
+    <path d="M20 20h-2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2M4 20h2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4M12 8v8" />
+  </svg>
+)
+
+export const LineHeightSVG = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    height="1em"
+    // fill="none"
+    // strokeWidth={1.5}
+    // color="#000"
+    {...props}
+  >
+    <path
+      // stroke="#000"
+      // strokeLinecap="round"
+      // strokeLinejoin="round"
+      d="M11 6h10m-10 6h10m-10 6h10M5 19V5m0 14-2-2.5M5 19l2-2.5M5 5 3 7m2-2 2 2"
+    />
+  </svg>
+)
+
+
+export const MarginInlineSVG = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     height="1em"

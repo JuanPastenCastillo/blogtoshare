@@ -4,6 +4,13 @@ export const AccessibilityControls_TextSizeWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
+  & > :nth-child(1){
+    fill: transparent;
+    stroke:white;
+    stroke-width: 3px;
+  }
+  
+  
   & > :nth-child(1),
   & > :nth-child(3) {
     place-self: center;
@@ -13,6 +20,7 @@ export const AccessibilityControls_TextSizeWrapper = styled.div`
     width: 55px;
     aspect-ratio: 1/1;
     border-radius: 50%;
+    
   }
 
   & > :nth-child(2) {

@@ -11,10 +11,12 @@ export default function App({ Component, pageProps }) {
     p: CALCULATED_CONST_ACCESSIBILITY.p[CONST_ACCESSIBILITY_RULES.textHowMuchChanges.initialValueIndex],
     h1: CALCULATED_CONST_ACCESSIBILITY.h1[CONST_ACCESSIBILITY_RULES.textHowMuchChanges.initialValueIndex],
     h2: CALCULATED_CONST_ACCESSIBILITY.h2[CONST_ACCESSIBILITY_RULES.textHowMuchChanges.initialValueIndex],
-    h3h4h5h6: CALCULATED_CONST_ACCESSIBILITY.h3h4h5h6[CONST_ACCESSIBILITY_RULES.textHowMuchChanges.initialValueIndex]
+    h3h4h5h6: CALCULATED_CONST_ACCESSIBILITY.h3h4h5h6[CONST_ACCESSIBILITY_RULES.textHowMuchChanges.initialValueIndex],
   })
 
   const [letterSpacing, setLetterSpacing] = useState(CALCULATED_CONST_ACCESSIBILITY.letterSpacing.default)
+
+  const [wordSpacing, setWordSpacing] = useState(CALCULATED_CONST_ACCESSIBILITY.wordSpacing.default)
 
   return (
     <Fragment>
@@ -26,10 +28,13 @@ export default function App({ Component, pageProps }) {
         <UserView_Provider>
           <Layout
             setFontSize={setFontSize}
-            setLetterSpacing={setLetterSpacing}>
+            setLetterSpacing={setLetterSpacing}
+            setWordSpacing={setWordSpacing}
+          >
             <GlobalStyle
               fontSize={fontSize}
               letterSpacing={letterSpacing}
+              wordSpacing={wordSpacing}
             />
             <Component {...pageProps} />
           </Layout>

@@ -32,6 +32,6 @@ export const arrayForTextWithDefaultValue = (defaultVal, from, to, steps, valueT
   return {
     data: accessibilityArray,
     default: defaultVal,
-    name: name,
+    name,
   };
 }

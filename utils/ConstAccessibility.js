@@ -20,7 +20,7 @@ export const CONST_ACCESSIBILITY_RULES = {
   },
   textHowMuchChanges: {
     min: 0,
-    max: 9,
+    max: 15,
     initialValueIndex: 2,
     steps: 4
   },

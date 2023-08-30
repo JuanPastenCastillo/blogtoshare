@@ -1,8 +1,6 @@
 import styled from "styled-components"
 
 export const AccessibilityControlsWrapper = styled.div`
-  border: 2px solid white;
-
   position: fixed;
   z-index: 2;
   bottom: 0px;
@@ -20,6 +18,12 @@ export const AccessibilityControlsWrapper = styled.div`
   word-spacing: normal !important;
   line-height: normal !important;
 
+  border-top-left-radius: 28px;
+  /* border-bottom-left-radius:28px; */
+
+  box-shadow: -1px -1px 1.2px hsla(0, 0%, 100%, 0.2),
+    -1.6px -1.6px 1.9px -1.1px hsla(0, 0%, 100%, 0.3);
+  
   * {
     font-size: 22px !important;
     letter-spacing: normal !important;
@@ -32,8 +36,7 @@ export const AccessibilityControlsWrapper = styled.div`
     visibility: visible;
     position: absolute;
 
-    left: ${({ widthElementToShowAndHide, show }) =>
-    show ? `-${widthElementToShowAndHide}px` : `-${widthElementToShowAndHide}px`};
+    left: ${({ widthElementToShowAndHide, show }) => (show ? `-${widthElementToShowAndHide}px` : `-${widthElementToShowAndHide}px`)};
 
     border: none;
     padding: 4px;

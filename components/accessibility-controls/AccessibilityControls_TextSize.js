@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { MinusSVG, PlusSVG, RefreshSVG } from "../../assets/icons/index.js"
+import { FontSizeSVG, MinusSVG, PlusSVG, RefreshSVG } from "../../assets/icons/index.js"
 import { CALCULATED_CONST_ACCESSIBILITY, CONST_ACCESSIBILITY_RULES } from "../../utils/ConstAccessibility.js"
 import { AccessibilityControls_TextSizeWrapper } from "./styles/AccessibilityControls_TextSizeWrapper.js"
 
@@ -52,7 +52,9 @@ export const AccessibilityControls_TextSize = ({
 
   return (
     <AccessibilityControls_TextSizeWrapper>
-      <span>Aa</span>
+      <span>
+        <FontSizeSVG />
+      </span>
 
       <div>
         <span onClick={DOWN}>

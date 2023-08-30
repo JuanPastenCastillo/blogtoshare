@@ -5,9 +5,11 @@ export const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-   
-   /* Add here the letter spacing */ 
-   /* letter-spacing: 0.12em; */
+  
+  letter-spacing: ${({ letterSpacing }) => letterSpacing};
+  
+  
+   word-spacing: ${({ wordSpacing }) => wordSpacing};
    
    /* Add here the word-spacing */
    /* word-spacing: 0.5em; */
@@ -21,10 +23,8 @@ export const GlobalStyle = createGlobalStyle`
   /* Add here the font-family */
   font-family: 'Space Grotesk'; 
   
-}
-
-*{
-  letter-spacing: ${({ letterSpacing }) => letterSpacing};
+  
+  
 }
 
 html,
@@ -81,10 +81,6 @@ p{
   margin-bottom:1rem ;
   
 }
-
-
-
-  
 
 a {
   color: inherit;

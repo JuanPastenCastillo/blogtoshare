@@ -7,7 +7,6 @@ export const AccessibilityControls_LetterSpacing = ({ setLetterSpacing }) => {
   const [initialStep, setInitialStep] = useState(-1)
   const [defaultValue, setDefaultValue] = useState(CONST_ACCESSIBILITY_RULES.letterSpacing.default)
 
-
   const UP = () => {
     if (initialStep < CALCULATED_CONST_ACCESSIBILITY.letterSpacing.data.length - 1) {
       setLetterSpacing(CALCULATED_CONST_ACCESSIBILITY.letterSpacing.data[initialStep + 1])
@@ -34,12 +33,13 @@ export const AccessibilityControls_LetterSpacing = ({ setLetterSpacing }) => {
       <span>
         <LetterSpacingSVG />
       </span>
+
       <div>
         <span onClick={DOWN}>
           <MinusSVG />
         </span>
 
-        <span>{initialStep === -1 ? defaultValue : initialStep}</span>
+        <span>{initialStep === -1 ? defaultValue : initialStep + 1}</span>
 
         <span onClick={UP}>
           <PlusSVG />
