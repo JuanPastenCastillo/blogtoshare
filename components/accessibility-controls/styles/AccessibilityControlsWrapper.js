@@ -8,9 +8,10 @@ export const AccessibilityControlsWrapper = styled.div`
 
   visibility: ${({ show }) => (show ? `visible` : `hidden`)};
 
-  background-image: linear-gradient(hsl(220.9, 39.3%, 11%), hsl(215, 13.8%, 14.1%));
-
-  width: 91vw;
+  background-image: linear-gradient(hsla(220.9, 39.3%, 11%, 0.7), hsla(215, 13.8%, 14.1%, 0.7));
+  backdrop-filter: blur(3.9px);
+  
+  width: ${({ widthElementToShowAndHide, show }) => (show ? `calc(100vw - ${widthElementToShowAndHide}px)` : "")};
   aspect-ratio: 3/1;
 
   font-size: 22px !important;
@@ -19,9 +20,9 @@ export const AccessibilityControlsWrapper = styled.div`
   line-height: normal !important;
 
   border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
   border: 2px solid white;
-  
-  
+
   * {
     font-size: 22px !important;
     letter-spacing: normal !important;

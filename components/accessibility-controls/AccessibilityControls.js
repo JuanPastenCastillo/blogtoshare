@@ -59,8 +59,8 @@ export const AccessibilityControls = ({ setFontSize, setLetterSpacing, setWordSp
       {/* 
       <p>✅Letter spacing [plus and less]</p>
       <p>✅Word spacing [plus and less]</p>
-      <p>👀Line height [plus and less]</p>
-      <p>Content width [plus and less] </p>
+      <p>✅Line height [plus and less]</p>
+      <p>👀Content width [plus and less] </p>
       <p>Font-style: ...</p>
       <p>Colors: light, dark, sepia (others maybe)</p> */}
       <button
