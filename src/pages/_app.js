@@ -20,6 +20,9 @@ export default function App({ Component, pageProps }) {
 
   const [lineHeight, setLineHeight] = useState(CALCULATED_CONST_ACCESSIBILITY.lineHeight.default)
 
+  const [marginIniline, setMarginIniline] = useState(CALCULATED_CONST_ACCESSIBILITY.marginInline.default)
+
+
   return (
     <Fragment>
       <Head>
@@ -33,6 +36,8 @@ export default function App({ Component, pageProps }) {
             setLetterSpacing={setLetterSpacing}
             setWordSpacing={setWordSpacing}
             setLineHeight={setLineHeight}
+            setMarginIniline={setMarginIniline}
+
 
           >
             <GlobalStyle
@@ -40,6 +45,8 @@ export default function App({ Component, pageProps }) {
               letterSpacing={letterSpacing}
               wordSpacing={wordSpacing}
               lineHeight={lineHeight}
+              marginIniline={marginIniline}
+
 
             />
             <Component {...pageProps} />

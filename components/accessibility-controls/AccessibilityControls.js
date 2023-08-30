@@ -3,13 +3,14 @@ import { TextPreferencesSVG } from "../../assets/icons/index.js"
 import { useOutsideHide } from "../../utils/useOutsideHide.js"
 import { AccessibilityControls_LetterSpacing } from "./AccessibilityControls_LetterSpacing.js"
 import { AccessibilityControls_LineHeight } from "./AccessibilityControls_LineHeight.js"
+import { AccessibilityControls_MarginInline } from "./AccessibilityControls_MarginInline.js"
 import { AccessibilityControls_TextSize } from "./AccessibilityControls_TextSize.js"
 import { AccessibilityControls_WordSpacing } from "./AccessibilityControls_WordSpacing.js"
 import { AccessibilityControlsWrapper } from "./styles/AccessibilityControlsWrapper.js"
 
 const nameToCloseTheFilters = "nameToCloseTheFilters-AccessibilityControls"
 
-export const AccessibilityControls = ({ setFontSize, setLetterSpacing, setWordSpacing, setLineHeight }) => {
+export const AccessibilityControls = ({ setFontSize, setLetterSpacing, setWordSpacing, setLineHeight, setMarginIniline }) => {
   const [show, setShow] = useState(false)
   const handleShow = () => {
     setShow((prevState) => !prevState)
@@ -48,19 +49,17 @@ export const AccessibilityControls = ({ setFontSize, setLetterSpacing, setWordSp
 
       <AccessibilityControls_LetterSpacing setLetterSpacing={setLetterSpacing} />
 
-      <AccessibilityControls_WordSpacing setWordSpacing={setWordSpacing}
-      />
+      <AccessibilityControls_WordSpacing setWordSpacing={setWordSpacing} />
 
-      <AccessibilityControls_LineHeight setLineHeight={setLineHeight}
-      />
+      <AccessibilityControls_LineHeight setLineHeight={setLineHeight} />
 
-
+      <AccessibilityControls_MarginInline setMarginIniline={setMarginIniline} />
 
       {/* 
       <p>✅Letter spacing [plus and less]</p>
       <p>✅Word spacing [plus and less]</p>
       <p>✅Line height [plus and less]</p>
-      <p>👀Content width [plus and less] </p>
+      <p>✅Content width [plus and less] </p>
       <p>Font-style: ...</p>
       <p>Colors: light, dark, sepia (others maybe)</p> */}
       <button

@@ -4,25 +4,25 @@ export const TEXT_SIZE = [8, 12, 16, 20, 24, 28, 32, 36, 40, 44]
 export const CONST_ACCESSIBILITY_RULES = {
   p: {
     default: 16,
-    valueToUse: "px"
+    valueToUse: "px",
   },
   h1: {
     default: 32,
-    valueToUse: "px"
+    valueToUse: "px",
   },
   h2: {
     default: 24,
-    valueToUse: "px"
+    valueToUse: "px",
   },
   h3h4h5h6: {
     default: 19,
-    valueToUse: "px"
+    valueToUse: "px",
   },
   textHowMuchChanges: {
     min: 0,
     max: 15,
     initialValueIndex: 2,
-    steps: 4
+    steps: 4,
   },
   letterSpacing: {
     default: "normal",
@@ -30,7 +30,7 @@ export const CONST_ACCESSIBILITY_RULES = {
     to: 0.6,
     steps: 4,
     valueToUse: "em",
-    name: "letterSpacing"
+    name: "letterSpacing",
   },
   wordSpacing: {
     default: "normal",
@@ -38,7 +38,7 @@ export const CONST_ACCESSIBILITY_RULES = {
     to: 4,
     steps: 9,
     valueToUse: "em",
-    name: "wordSpacing"
+    name: "wordSpacing",
   },
   lineHeight: {
     default: "normal",
@@ -46,25 +46,25 @@ export const CONST_ACCESSIBILITY_RULES = {
     to: 4.6,
     steps: 9,
     valueToUse: "em",
-    name: "lineHeight"
+    name: "lineHeight",
+  },
+  marginInline: {
+    default: 0,
+    from: 10,
+    to: 150,
+    steps: 9,
+    valueToUse: "px",
+    name: "marginInline",
   },
   fontFamily: {
     "Courier New": "Courier New",
     "sans-serif": "sans-serif",
     "Space Grotesk": "Space Grotesk",
     "system-ui": "system-ui",
-    "calibri": "calibri",
-    "monospace": "monospace",
-    "serif": "serif",
+    calibri: "calibri",
+    monospace: "monospace",
+    serif: "serif",
   },
-  marginInline: {
-    default: 0,
-    from: 50,
-    to: 200,
-    steps: 3,
-    valueToUse: "px",
-    name: "marginInline"
-  }
 }
 
 export const CALCULATED_CONST_ACCESSIBILITY = {
@@ -73,28 +73,28 @@ export const CALCULATED_CONST_ACCESSIBILITY = {
     CONST_ACCESSIBILITY_RULES.textHowMuchChanges.initialValueIndex,
     CONST_ACCESSIBILITY_RULES.textHowMuchChanges.max,
     CONST_ACCESSIBILITY_RULES.textHowMuchChanges.steps,
-    CONST_ACCESSIBILITY_RULES.p.valueToUse
+    CONST_ACCESSIBILITY_RULES.p.valueToUse,
   ),
   h1: arrayForTextOnlyNumbers(
     CONST_ACCESSIBILITY_RULES.h1.default,
     CONST_ACCESSIBILITY_RULES.textHowMuchChanges.initialValueIndex,
     CONST_ACCESSIBILITY_RULES.textHowMuchChanges.max,
     CONST_ACCESSIBILITY_RULES.textHowMuchChanges.steps,
-    CONST_ACCESSIBILITY_RULES.h1.valueToUse
+    CONST_ACCESSIBILITY_RULES.h1.valueToUse,
   ),
   h2: arrayForTextOnlyNumbers(
     CONST_ACCESSIBILITY_RULES.h2.default,
     CONST_ACCESSIBILITY_RULES.textHowMuchChanges.initialValueIndex,
     CONST_ACCESSIBILITY_RULES.textHowMuchChanges.max,
     CONST_ACCESSIBILITY_RULES.textHowMuchChanges.steps,
-    CONST_ACCESSIBILITY_RULES.h2.valueToUse
+    CONST_ACCESSIBILITY_RULES.h2.valueToUse,
   ),
   h3h4h5h6: arrayForTextOnlyNumbers(
     CONST_ACCESSIBILITY_RULES.h3h4h5h6.default,
     CONST_ACCESSIBILITY_RULES.textHowMuchChanges.initialValueIndex,
     CONST_ACCESSIBILITY_RULES.textHowMuchChanges.max,
     CONST_ACCESSIBILITY_RULES.textHowMuchChanges.steps,
-    CONST_ACCESSIBILITY_RULES.h3h4h5h6.valueToUse
+    CONST_ACCESSIBILITY_RULES.h3h4h5h6.valueToUse,
   ),
   letterSpacing: arrayForTextWithDefaultValue(
     CONST_ACCESSIBILITY_RULES.letterSpacing.default,
@@ -103,7 +103,6 @@ export const CALCULATED_CONST_ACCESSIBILITY = {
     CONST_ACCESSIBILITY_RULES.letterSpacing.steps,
     CONST_ACCESSIBILITY_RULES.letterSpacing.valueToUse,
     CONST_ACCESSIBILITY_RULES.letterSpacing.name,
-
   ),
   wordSpacing: arrayForTextWithDefaultValue(
     CONST_ACCESSIBILITY_RULES.wordSpacing.default,

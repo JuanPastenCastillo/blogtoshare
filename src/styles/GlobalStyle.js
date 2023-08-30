@@ -11,8 +11,6 @@ export const GlobalStyle = createGlobalStyle`
   
   line-height: ${({ lineHeight }) => lineHeight};
   
-   /* Add here the line-height */
-   /* line-height: 2.6em; */
   
    /* Add here the color-scheme */
   color-scheme: dark; 
@@ -29,6 +27,7 @@ body {
   max-width: 100vw;
    /* Add here the margin-inline */
    /* margin-inline: 200px; */
+   margin-inline: ${({ marginIniline }) => marginIniline};
 }
 
 h1{
