@@ -6,7 +6,7 @@ export const AccessibilityControlsWrapper = styled.div`
   bottom: 0px;
   right: ${({ show, widthParent }) => (show && widthParent ? `0` : `-${widthParent}px`)};
 
-  visibility: ${({ show }) => (show ? `visible` : `hidden`)};
+  display: ${({ show }) => (show ? `visible` : `hidden`)};
 
   background-image: linear-gradient(hsla(220.9, 39.3%, 11%, 0.7), hsla(215, 13.8%, 14.1%, 0.7));
   backdrop-filter: blur(3.9px);

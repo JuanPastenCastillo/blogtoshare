@@ -14,30 +14,41 @@ const nameToCloseTheFilters = "nameToCloseTheFilters-AccessibilityControls"
 export const AccessibilityControls = ({ setFontSize, setLetterSpacing, setWordSpacing, setLineHeight, setMarginIniline, setFontFamily }) => {
   const [show, setShow] = useState(false)
 
-  const handleShow = () => {
-    setShow((prevState) => !prevState)
+  const handleShow = (e) => {
+    if (e.type === "click" || e.code === "F1" || e.code === "Enter" || e.key === "Enter") {
+      setShow((prevState) => !prevState)
+    }
   }
 
   useEffect(() => {
     const handleKeyPress = (event) => {
-      if (event.shiftKey && event.key.toLowerCase() === 'a' || event.key === 'F1') {
-        handleShow()
+      if ((event.shiftKey && event.key.toLowerCase() === "a") || event.key === "F1") {
+        handleShow(event)
       }
-    };
 
-    document.addEventListener('keydown', handleKeyPress);
+      if (event.key === "Escape") {
+        setShow(false)
+      }
+    }
+
+    document.addEventListener("keydown", handleKeyPress)
 
     return () => {
-      document.removeEventListener('keydown', handleKeyPress);
-    };
-
-
-
+      document.removeEventListener("keydown", handleKeyPress)
+    }
   }, [])
 
   const [widthParent, setWidthParent] = useState()
   const getWidthRef = useRef(null)
   const widthElementToShowAndHide = useRef(null)
+
+  const refToFirstAccessibilityControl = useRef(null)
+
+  useEffect(() => {
+    if (show && refToFirstAccessibilityControl.current) {
+      refToFirstAccessibilityControl.current.focus()
+    }
+  }, [show, refToFirstAccessibilityControl])
 
   useEffect(() => {
     const handleResize = () => {
@@ -64,7 +75,10 @@ export const AccessibilityControls = ({ setFontSize, setLetterSpacing, setWordSp
       widthParent={widthParent}
       widthElementToShowAndHide={widthElementToShowAndHide.current?.clientWidth}
       className={nameToCloseTheFilters}>
-      <AccessibilityControls_TextSize setFontSize={setFontSize} />
+      <AccessibilityControls_TextSize
+        setFontSize={setFontSize}
+        refToFirstAccessibilityControl={refToFirstAccessibilityControl}
+      />
 
       <AccessibilityControls_LetterSpacing setLetterSpacing={setLetterSpacing} />
 
@@ -74,25 +88,11 @@ export const AccessibilityControls = ({ setFontSize, setLetterSpacing, setWordSp
 
       <AccessibilityControls_MarginInline setMarginIniline={setMarginIniline} />
 
-      <AccessibilityControls_FontFamily setFontFamily={setFontFamily}
-      />
+      <AccessibilityControls_FontFamily setFontFamily={setFontFamily} />
 
-
-
-      {/* 
-      //!FH0
-      Create the different font-styles
-      */}
-
-      {/* 
-      <p>✅Letter spacing [plus and less]</p>
-      <p>✅Word spacing [plus and less]</p>
-      <p>✅Line height [plus and less]</p>
-      <p>✅Content width [plus and less] </p>
-      <p>👀Font-style: ...</p>
-      <p>Colors: light, dark, sepia (others maybe)</p> */}
       <button
         onClick={handleShow}
+        tabIndex={0}
         ref={widthElementToShowAndHide}>
         <TextPreferencesSVG />
       </button>

@@ -43,14 +43,21 @@ dynamic page to the previous one, the page should not go to top automatically, s
 
 ✅- The component should be able to show and hide
 ✅- Font-size
-👀- Letter spacing
+✅- Letter spacing
 
-- Line height
-- Font style
-- Margin lef and right ❌- Zoom in and zoom out
-- Color: light, dark, sepia
-- The accessibility feature have a full width and height toggle button
-- The accessibility feature should be able be used with keboard: access to the feature and navigate on that
+- ✅Line height
+- ✅Font style
+- ✅Margin lef and right ❌- Zoom in and zoom out
+- ❌Color: light, dark, sepia
+- ❌The accessibility feature have a full width and height toggle button
+- ✅The accessibility feature should be able be used with keboard: access to the feature and navigate on that
+<!--
+!FH0
+Create the reset button
+ -->
+
+- 👀Accessibility feature should have one button to reset to defaul all the changes
+- Fix navbar on mobile: the navigation bar hidde when the user click to display the hamburger options
 
 2. Create a feature that allow people download the content of a page: in pdf, plain text and markdown
 

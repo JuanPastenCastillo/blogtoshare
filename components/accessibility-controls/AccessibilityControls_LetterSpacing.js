@@ -7,25 +7,31 @@ export const AccessibilityControls_LetterSpacing = ({ setLetterSpacing }) => {
   const [initialStep, setInitialStep] = useState(-1)
   const [defaultValue, setDefaultValue] = useState(CONST_ACCESSIBILITY_RULES.letterSpacing.default)
 
-  const UP = () => {
-    if (initialStep < CALCULATED_CONST_ACCESSIBILITY.letterSpacing.data.length - 1) {
-      setLetterSpacing(CALCULATED_CONST_ACCESSIBILITY.letterSpacing.data[initialStep + 1])
+  const UP = (e) => {
+    if (e.type === "click" || e.code === "Enter") {
+      if (initialStep < CALCULATED_CONST_ACCESSIBILITY.letterSpacing.data.length - 1) {
+        setLetterSpacing(CALCULATED_CONST_ACCESSIBILITY.letterSpacing.data[initialStep + 1])
 
-      setInitialStep((prevState) => prevState + 1)
+        setInitialStep((prevState) => prevState + 1)
+      }
     }
   }
 
-  const DOWN = () => {
-    if (initialStep > 0) {
-      setLetterSpacing(CALCULATED_CONST_ACCESSIBILITY.letterSpacing.data[initialStep - 1])
+  const DOWN = (e) => {
+    if (e.type === "click" || e.code === "Enter") {
+      if (initialStep > 0) {
+        setLetterSpacing(CALCULATED_CONST_ACCESSIBILITY.letterSpacing.data[initialStep - 1])
 
-      setInitialStep((prevState) => prevState - 1)
+        setInitialStep((prevState) => prevState - 1)
+      }
     }
   }
 
-  const DEFAULT = () => {
-    setLetterSpacing(CONST_ACCESSIBILITY_RULES.letterSpacing.default)
-    setInitialStep(-1)
+  const DEFAULT = (e) => {
+    if (e.type === "click" || e.code === "Enter") {
+      setLetterSpacing(CONST_ACCESSIBILITY_RULES.letterSpacing.default)
+      setInitialStep(-1)
+    }
   }
 
   return (
@@ -35,18 +41,27 @@ export const AccessibilityControls_LetterSpacing = ({ setLetterSpacing }) => {
       </span>
 
       <div>
-        <span onClick={DOWN}>
+        <span
+          onClick={DOWN}
+          onKeyDown={DOWN}
+          tabIndex={0}>
           <MinusSVG />
         </span>
 
         <span>{initialStep === -1 ? defaultValue : initialStep + 1}</span>
 
-        <span onClick={UP}>
+        <span
+          onClick={UP}
+          onKeyDown={UP}
+          tabIndex={0}>
           <PlusSVG />
         </span>
       </div>
 
-      <span onClick={DEFAULT}>
+      <span
+        onClick={DEFAULT}
+        onKeyDown={DEFAULT}
+        tabIndex={0}>
         <RefreshSVG />
       </span>
     </AccessibilityControls_LetterSpacingWrapper>

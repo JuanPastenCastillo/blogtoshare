@@ -10,44 +10,51 @@ export const AccessibilityControls_TextSize = ({
   // setParagraphCalculated,
   // textRules,
   // setTextRules,
-  setFontSize
+  setFontSize,
+  refToFirstAccessibilityControl
 }) => {
   const [initialStep, setInitialStep] = useState(CONST_ACCESSIBILITY_RULES.textHowMuchChanges.initialValueIndex)
 
-  const UP = () => {
-    if (initialStep < CONST_ACCESSIBILITY_RULES.textHowMuchChanges.max - 1) {
-      setFontSize({
-        p: CALCULATED_CONST_ACCESSIBILITY.p[initialStep + 1],
-        h1: CALCULATED_CONST_ACCESSIBILITY.h1[initialStep + 1],
-        h2: CALCULATED_CONST_ACCESSIBILITY.h2[initialStep + 1],
-        h3h4h5h6: CALCULATED_CONST_ACCESSIBILITY.h3h4h5h6[initialStep + 1]
-      })
+  const UP = (e) => {
+    if (e.type === "click" || e.code === "Enter") {
+      if (initialStep < CONST_ACCESSIBILITY_RULES.textHowMuchChanges.max - 1) {
+        setFontSize({
+          p: CALCULATED_CONST_ACCESSIBILITY.p[initialStep + 1],
+          h1: CALCULATED_CONST_ACCESSIBILITY.h1[initialStep + 1],
+          h2: CALCULATED_CONST_ACCESSIBILITY.h2[initialStep + 1],
+          h3h4h5h6: CALCULATED_CONST_ACCESSIBILITY.h3h4h5h6[initialStep + 1],
+        })
 
-      setInitialStep((prevState) => prevState + 1)
+        setInitialStep((prevState) => prevState + 1)
+      }
     }
   }
-  const DOWN = () => {
-    if (initialStep > CONST_ACCESSIBILITY_RULES.textHowMuchChanges.min) {
-      setFontSize({
-        p: CALCULATED_CONST_ACCESSIBILITY.p[initialStep - 1],
-        h1: CALCULATED_CONST_ACCESSIBILITY.h1[initialStep - 1],
-        h2: CALCULATED_CONST_ACCESSIBILITY.h2[initialStep - 1],
-        h3h4h5h6: CALCULATED_CONST_ACCESSIBILITY.h3h4h5h6[initialStep - 1]
-      })
+  const DOWN = (e) => {
+    if (e.type === "click" || e.code === "Enter") {
+      if (initialStep > CONST_ACCESSIBILITY_RULES.textHowMuchChanges.min) {
+        setFontSize({
+          p: CALCULATED_CONST_ACCESSIBILITY.p[initialStep - 1],
+          h1: CALCULATED_CONST_ACCESSIBILITY.h1[initialStep - 1],
+          h2: CALCULATED_CONST_ACCESSIBILITY.h2[initialStep - 1],
+          h3h4h5h6: CALCULATED_CONST_ACCESSIBILITY.h3h4h5h6[initialStep - 1],
+        })
 
-      setInitialStep((prevState) => prevState - 1)
+        setInitialStep((prevState) => prevState - 1)
+      }
     }
   }
 
-  const DEFAULT = () => {
-    setFontSize({
-      p: CALCULATED_CONST_ACCESSIBILITY.p[CONST_ACCESSIBILITY_RULES.textHowMuchChanges.initialValueIndex],
-      h1: CALCULATED_CONST_ACCESSIBILITY.h1[CONST_ACCESSIBILITY_RULES.textHowMuchChanges.initialValueIndex],
-      h2: CALCULATED_CONST_ACCESSIBILITY.h2[CONST_ACCESSIBILITY_RULES.textHowMuchChanges.initialValueIndex],
-      h3h4h5h6: CALCULATED_CONST_ACCESSIBILITY.h3h4h5h6[CONST_ACCESSIBILITY_RULES.textHowMuchChanges.initialValueIndex]
-    })
+  const DEFAULT = (e) => {
+    if (e.type === "click" || e.code === "Enter") {
+      setFontSize({
+        p: CALCULATED_CONST_ACCESSIBILITY.p[CONST_ACCESSIBILITY_RULES.textHowMuchChanges.initialValueIndex],
+        h1: CALCULATED_CONST_ACCESSIBILITY.h1[CONST_ACCESSIBILITY_RULES.textHowMuchChanges.initialValueIndex],
+        h2: CALCULATED_CONST_ACCESSIBILITY.h2[CONST_ACCESSIBILITY_RULES.textHowMuchChanges.initialValueIndex],
+        h3h4h5h6: CALCULATED_CONST_ACCESSIBILITY.h3h4h5h6[CONST_ACCESSIBILITY_RULES.textHowMuchChanges.initialValueIndex],
+      })
 
-    setInitialStep(CONST_ACCESSIBILITY_RULES.textHowMuchChanges.initialValueIndex)
+      setInitialStep(CONST_ACCESSIBILITY_RULES.textHowMuchChanges.initialValueIndex)
+    }
   }
 
   return (
@@ -57,18 +64,29 @@ export const AccessibilityControls_TextSize = ({
       </span>
 
       <div>
-        <span onClick={DOWN}>
+        <span
+          onClick={DOWN}
+          onKeyDown={DOWN}
+          tabIndex={0}
+          ref={refToFirstAccessibilityControl}
+        >
           <MinusSVG />
         </span>
 
         <span>{initialStep + 1}</span>
 
-        <span onClick={UP}>
+        <span
+          onClick={UP}
+          onKeyDown={UP}
+          tabIndex={0}>
           <PlusSVG />
         </span>
       </div>
 
-      <span onClick={DEFAULT}>
+      <span
+        onClick={DEFAULT}
+        onKeyDown={DEFAULT}
+        tabIndex={0}>
         <RefreshSVG />
       </span>
     </AccessibilityControls_TextSizeWrapper>
