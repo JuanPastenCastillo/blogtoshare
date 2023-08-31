@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 import { TextPreferencesSVG } from "../../assets/icons/index.js"
 import { useOutsideHide } from "../../utils/useOutsideHide.js"
+import { AccessibilityControls_FontFamily } from "./AccessibilityControls_FontFamily.js"
 import { AccessibilityControls_LetterSpacing } from "./AccessibilityControls_LetterSpacing.js"
 import { AccessibilityControls_LineHeight } from "./AccessibilityControls_LineHeight.js"
 import { AccessibilityControls_MarginInline } from "./AccessibilityControls_MarginInline.js"
@@ -10,7 +11,7 @@ import { AccessibilityControlsWrapper } from "./styles/AccessibilityControlsWrap
 
 const nameToCloseTheFilters = "nameToCloseTheFilters-AccessibilityControls"
 
-export const AccessibilityControls = ({ setFontSize, setLetterSpacing, setWordSpacing, setLineHeight, setMarginIniline }) => {
+export const AccessibilityControls = ({ setFontSize, setLetterSpacing, setWordSpacing, setLineHeight, setMarginIniline, setFontFamily }) => {
   const [show, setShow] = useState(false)
 
   const handleShow = () => {
@@ -73,12 +74,22 @@ export const AccessibilityControls = ({ setFontSize, setLetterSpacing, setWordSp
 
       <AccessibilityControls_MarginInline setMarginIniline={setMarginIniline} />
 
+      <AccessibilityControls_FontFamily setFontFamily={setFontFamily}
+      />
+
+
+
+      {/* 
+      //!FH0
+      Create the different font-styles
+      */}
+
       {/* 
       <p>✅Letter spacing [plus and less]</p>
       <p>✅Word spacing [plus and less]</p>
       <p>✅Line height [plus and less]</p>
       <p>✅Content width [plus and less] </p>
-      <p>Font-style: ...</p>
+      <p>👀Font-style: ...</p>
       <p>Colors: light, dark, sepia (others maybe)</p> */}
       <button
         onClick={handleShow}

@@ -27,7 +27,7 @@ export const AccessibilityControls_TextSizeWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-
+    
     & > * {
       width: 55px;
       aspect-ratio: 1/1;
@@ -48,6 +48,10 @@ export const AccessibilityControls_TextSizeWrapper = styled.div`
         background-color: red;
         fill: white;
       }
+    }
+    
+    & > :nth-child(2){
+      font-family: sans-serif !important;
     }
   }
 

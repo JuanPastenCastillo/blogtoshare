@@ -12,11 +12,10 @@ export const GlobalStyle = createGlobalStyle`
   line-height: ${({ lineHeight }) => lineHeight};
   
   
-   /* Add here the color-scheme */
+  font-family: ${({ fontFamily }) => fontFamily};
+
+  /* Add here the color-scheme */
   color-scheme: dark; 
-  
-  /* Add here the font-family */
-  font-family: 'Space Grotesk'; 
   
   
   
@@ -25,8 +24,6 @@ export const GlobalStyle = createGlobalStyle`
 html,
 body {
   max-width: 100vw;
-   /* Add here the margin-inline */
-   /* margin-inline: 200px; */
    margin-inline: ${({ marginIniline }) => marginIniline};
 }
 

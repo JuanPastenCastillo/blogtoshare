@@ -22,6 +22,7 @@ export default function App({ Component, pageProps }) {
 
   const [marginIniline, setMarginIniline] = useState(CALCULATED_CONST_ACCESSIBILITY.marginInline.default)
 
+  const [fontFamily, setFontFamily] = useState(CONST_ACCESSIBILITY_RULES.fontFamily.sansSerif)
 
   return (
     <Fragment>
@@ -37,17 +38,14 @@ export default function App({ Component, pageProps }) {
             setWordSpacing={setWordSpacing}
             setLineHeight={setLineHeight}
             setMarginIniline={setMarginIniline}
-
-
-          >
+            setFontFamily={setFontFamily}>
             <GlobalStyle
               fontSize={fontSize}
               letterSpacing={letterSpacing}
               wordSpacing={wordSpacing}
               lineHeight={lineHeight}
               marginIniline={marginIniline}
-
-
+              fontFamily={fontFamily}
             />
             <Component {...pageProps} />
           </Layout>

@@ -2,7 +2,7 @@ import { Footer } from "./Footer"
 import { Navbar } from "./Navbar"
 import { AccessibilityControls } from "./accessibility-controls/AccessibilityControls"
 
-export const Layout = ({ children, setFontSize, setLetterSpacing, setWordSpacing, setLineHeight, setMarginIniline }) => {
+export const Layout = ({ children, setFontSize, setLetterSpacing, setWordSpacing, setLineHeight, setMarginIniline, setFontFamily }) => {
   return (
     <>
       <Navbar />
@@ -15,8 +15,7 @@ export const Layout = ({ children, setFontSize, setLetterSpacing, setWordSpacing
         setWordSpacing={setWordSpacing}
         setLineHeight={setLineHeight}
         setMarginIniline={setMarginIniline}
-
-
+        setFontFamily={setFontFamily}
       />
 
       <Footer />

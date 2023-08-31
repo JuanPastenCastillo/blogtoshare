@@ -57,13 +57,8 @@ export const CONST_ACCESSIBILITY_RULES = {
     name: "marginInline",
   },
   fontFamily: {
-    "Courier New": "Courier New",
-    "sans-serif": "sans-serif",
-    "Space Grotesk": "Space Grotesk",
-    "system-ui": "system-ui",
-    calibri: "calibri",
-    monospace: "monospace",
-    serif: "serif",
+    sansSerif: "sans-serif",
+    serif: "serif"
   },
 }
 
