@@ -1,9 +1,9 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { LetterSpacingSVG, MinusSVG, PlusSVG, RefreshSVG } from "../../assets/icons/index.js"
 import { CALCULATED_CONST_ACCESSIBILITY, CONST_ACCESSIBILITY_RULES } from "../../utils/ConstAccessibility.js"
 import { AccessibilityControls_LetterSpacingWrapper } from "./styles/AccessibilityControls_LetterSpacingWrapper.js"
 
-export const AccessibilityControls_LetterSpacing = ({ setLetterSpacing }) => {
+export const AccessibilityControls_LetterSpacing = ({ setLetterSpacing, clickOnDefaultEverything }) => {
   const [initialStep, setInitialStep] = useState(-1)
   const [defaultValue, setDefaultValue] = useState(CONST_ACCESSIBILITY_RULES.letterSpacing.default)
 
@@ -28,11 +28,15 @@ export const AccessibilityControls_LetterSpacing = ({ setLetterSpacing }) => {
   }
 
   const DEFAULT = (e) => {
-    if (e.type === "click" || e.code === "Enter") {
+    if (e.type === "click" || e.code === "Enter" || e === "useEffect") {
       setLetterSpacing(CONST_ACCESSIBILITY_RULES.letterSpacing.default)
       setInitialStep(-1)
     }
   }
+
+  useEffect(() => {
+    DEFAULT("useEffect")
+  }, [clickOnDefaultEverything])
 
   return (
     <AccessibilityControls_LetterSpacingWrapper>

@@ -5,6 +5,7 @@ import { AccessibilityControls_FontFamily } from "./AccessibilityControls_FontFa
 import { AccessibilityControls_LetterSpacing } from "./AccessibilityControls_LetterSpacing.js"
 import { AccessibilityControls_LineHeight } from "./AccessibilityControls_LineHeight.js"
 import { AccessibilityControls_MarginInline } from "./AccessibilityControls_MarginInline.js"
+import { AccessibilityControls_ResetAll } from "./AccessibilityControls_ResetAll.js"
 import { AccessibilityControls_TextSize } from "./AccessibilityControls_TextSize.js"
 import { AccessibilityControls_WordSpacing } from "./AccessibilityControls_WordSpacing.js"
 import { AccessibilityControlsWrapper } from "./styles/AccessibilityControlsWrapper.js"
@@ -68,6 +69,8 @@ export const AccessibilityControls = ({ setFontSize, setLetterSpacing, setWordSp
 
   useOutsideHide(getWidthRef, setShow)
 
+  const [clickOnDefaultEverything, setClickOnDefaultEverything] = useState(false)
+
   return (
     <AccessibilityControlsWrapper
       show={show}
@@ -78,17 +81,37 @@ export const AccessibilityControls = ({ setFontSize, setLetterSpacing, setWordSp
       <AccessibilityControls_TextSize
         setFontSize={setFontSize}
         refToFirstAccessibilityControl={refToFirstAccessibilityControl}
+        clickOnDefaultEverything={clickOnDefaultEverything}
       />
 
-      <AccessibilityControls_LetterSpacing setLetterSpacing={setLetterSpacing} />
+      <AccessibilityControls_LetterSpacing
+        setLetterSpacing={setLetterSpacing}
+        clickOnDefaultEverything={clickOnDefaultEverything}
+      />
 
-      <AccessibilityControls_WordSpacing setWordSpacing={setWordSpacing} />
+      <AccessibilityControls_WordSpacing
+        setWordSpacing={setWordSpacing}
+        clickOnDefaultEverything={clickOnDefaultEverything}
+      />
 
-      <AccessibilityControls_LineHeight setLineHeight={setLineHeight} />
+      <AccessibilityControls_LineHeight
+        setLineHeight={setLineHeight}
+        clickOnDefaultEverything={clickOnDefaultEverything}
+      />
 
-      <AccessibilityControls_MarginInline setMarginIniline={setMarginIniline} />
+      <AccessibilityControls_MarginInline
+        setMarginIniline={setMarginIniline}
+        clickOnDefaultEverything={clickOnDefaultEverything}
+      />
 
-      <AccessibilityControls_FontFamily setFontFamily={setFontFamily} />
+      <AccessibilityControls_FontFamily
+        setFontFamily={setFontFamily}
+        clickOnDefaultEverything={clickOnDefaultEverything}
+      />
+
+      <AccessibilityControls_ResetAll
+        setClickOnDefaultEverything={setClickOnDefaultEverything}
+      />
 
       <button
         onClick={handleShow}

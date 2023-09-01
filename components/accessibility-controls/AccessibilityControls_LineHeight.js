@@ -1,9 +1,9 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { LineHeightSVG, MinusSVG, PlusSVG, RefreshSVG } from "../../assets/icons/index.js"
 import { CALCULATED_CONST_ACCESSIBILITY, CONST_ACCESSIBILITY_RULES } from "../../utils/ConstAccessibility.js"
 import { AccessibilityControls_LineHeightWrapper } from "./styles/AccessibilityControls_LineHeightWrapper.js"
 
-export const AccessibilityControls_LineHeight = ({ setLineHeight }) => {
+export const AccessibilityControls_LineHeight = ({ setLineHeight, clickOnDefaultEverything }) => {
   const [initialStep, setInitialStep] = useState(-1)
   const [defaultValue, setDefaultValue] = useState(CONST_ACCESSIBILITY_RULES.lineHeight.default)
 
@@ -28,11 +28,15 @@ export const AccessibilityControls_LineHeight = ({ setLineHeight }) => {
   }
 
   const DEFAULT = (e) => {
-    if (e.type === "click" || e.code === "Enter") {
+    if (e.type === "click" || e.code === "Enter" || e === "useEffect") {
       setLineHeight(CONST_ACCESSIBILITY_RULES.lineHeight.default)
       setInitialStep(-1)
     }
   }
+
+  useEffect(() => {
+    DEFAULT("useEffect")
+  }, [clickOnDefaultEverything])
 
   return (
     <AccessibilityControls_LineHeightWrapper>

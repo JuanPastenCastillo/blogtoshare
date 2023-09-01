@@ -1,9 +1,9 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { MinusSVG, PlusSVG, RefreshSVG, WordSpacingSVG } from "../../assets/icons/index.js"
 import { CALCULATED_CONST_ACCESSIBILITY, CONST_ACCESSIBILITY_RULES } from "../../utils/ConstAccessibility.js"
 import { AccessibilityControls_WordSpacingWrapper } from "./styles/AccessibilityControls_WordSpacingWrapper.js"
 
-export const AccessibilityControls_WordSpacing = ({ setWordSpacing }) => {
+export const AccessibilityControls_WordSpacing = ({ setWordSpacing, clickOnDefaultEverything }) => {
   const [initialStep, setInitialStep] = useState(-1)
   const [defaultValue, setDefaultValue] = useState(CONST_ACCESSIBILITY_RULES.wordSpacing.default)
 
@@ -28,11 +28,15 @@ export const AccessibilityControls_WordSpacing = ({ setWordSpacing }) => {
   }
 
   const DEFAULT = (e) => {
-    if (e.type === "click" || e.code === "Enter") {
+    if (e.type === "click" || e.code === "Enter" || e === "useEffect") {
       setWordSpacing(CONST_ACCESSIBILITY_RULES.wordSpacing.default)
       setInitialStep(-1)
     }
   }
+
+  useEffect(() => {
+    DEFAULT("useEffect")
+  }, [clickOnDefaultEverything])
 
   return (
     <AccessibilityControls_WordSpacingWrapper>

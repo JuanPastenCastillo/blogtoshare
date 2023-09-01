@@ -1,9 +1,9 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { MarginInlineSVG, MinusSVG, PlusSVG, RefreshSVG } from "../../assets/icons/index.js"
 import { CALCULATED_CONST_ACCESSIBILITY, CONST_ACCESSIBILITY_RULES } from "../../utils/ConstAccessibility.js"
 import { AccessibilityControls_MarginInlineWrapper } from "./styles/AccessibilityControls_MarginInlineWrapper.js"
 
-export const AccessibilityControls_MarginInline = ({ setMarginIniline }) => {
+export const AccessibilityControls_MarginInline = ({ setMarginIniline, clickOnDefaultEverything }) => {
   const [initialStep, setInitialStep] = useState(-1)
 
   const UP = (e) => {
@@ -27,11 +27,15 @@ export const AccessibilityControls_MarginInline = ({ setMarginIniline }) => {
   }
 
   const DEFAULT = (e) => {
-    if (e.type === "click" || e.code === "Enter") {
+    if (e.type === "click" || e.code === "Enter" || e === "useEffect") {
       setMarginIniline(CONST_ACCESSIBILITY_RULES.marginInline.default)
       setInitialStep(-1)
     }
   }
+
+  useEffect(() => {
+    DEFAULT("useEffect")
+  }, [clickOnDefaultEverything])
 
   return (
     <AccessibilityControls_MarginInlineWrapper>

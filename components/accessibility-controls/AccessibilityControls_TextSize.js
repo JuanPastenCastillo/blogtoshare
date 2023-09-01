@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { FontSizeSVG, MinusSVG, PlusSVG, RefreshSVG } from "../../assets/icons/index.js"
 import { CALCULATED_CONST_ACCESSIBILITY, CONST_ACCESSIBILITY_RULES } from "../../utils/ConstAccessibility.js"
 import { AccessibilityControls_TextSizeWrapper } from "./styles/AccessibilityControls_TextSizeWrapper.js"
@@ -11,7 +11,8 @@ export const AccessibilityControls_TextSize = ({
   // textRules,
   // setTextRules,
   setFontSize,
-  refToFirstAccessibilityControl
+  refToFirstAccessibilityControl,
+  clickOnDefaultEverything
 }) => {
   const [initialStep, setInitialStep] = useState(CONST_ACCESSIBILITY_RULES.textHowMuchChanges.initialValueIndex)
 
@@ -45,7 +46,7 @@ export const AccessibilityControls_TextSize = ({
   }
 
   const DEFAULT = (e) => {
-    if (e.type === "click" || e.code === "Enter") {
+    if (e.type === "click" || e.code === "Enter" || e === "useEffect") {
       setFontSize({
         p: CALCULATED_CONST_ACCESSIBILITY.p[CONST_ACCESSIBILITY_RULES.textHowMuchChanges.initialValueIndex],
         h1: CALCULATED_CONST_ACCESSIBILITY.h1[CONST_ACCESSIBILITY_RULES.textHowMuchChanges.initialValueIndex],
@@ -56,6 +57,10 @@ export const AccessibilityControls_TextSize = ({
       setInitialStep(CONST_ACCESSIBILITY_RULES.textHowMuchChanges.initialValueIndex)
     }
   }
+
+  useEffect(() => {
+    DEFAULT("useEffect")
+  }, [clickOnDefaultEverything])
 
   return (
     <AccessibilityControls_TextSizeWrapper>

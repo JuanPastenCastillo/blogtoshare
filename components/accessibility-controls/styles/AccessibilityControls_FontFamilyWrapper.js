@@ -44,7 +44,7 @@ export const AccessibilityControls_FontFamilyWrapper = styled.div`
     }
 
     & > :nth-child(2) {
-      font-size: 105px !important;
+      font-size: 40px !important;
     }
   }
 `
