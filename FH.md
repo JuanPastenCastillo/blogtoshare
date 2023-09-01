@@ -12,7 +12,7 @@ dynamic page to the previous one, the page should not go to top automatically, s
 
   - ✅Compile questions
   - ✅Share questions with Jillian
-  - 👀Know which question will be done and which not
+  - ✅Know which question will be done and which not
   - Schedule a meeting to the interview
   - Do the interview + record it
   - Extract main ideas
@@ -51,12 +51,8 @@ dynamic page to the previous one, the page should not go to top automatically, s
 - ❌Color: light, dark, sepia
 - ❌The accessibility feature have a full width and height toggle button
 - ✅The accessibility feature should be able be used with keboard: access to the feature and navigate on that
-<!--
-!FH0
-Create the reset button
- -->
-
-- 👀Accessibility feature should have one button to reset to defaul all the changes
+- ✅Accessibility feature should have one button to reset to defaul all the changes
+- 👀Fix bug of small screen
 - Fix navbar on mobile: the navigation bar hidde when the user click to display the hamburger options
 
 2. Create a feature that allow people download the content of a page: in pdf, plain text and markdown
@@ -80,3 +76,7 @@ Create the reset button
 10. Share it in twitter
 
 11. Keep with the codeRoadmap
+
+# Commit
+
+Change - In Accessibility feature, the Reset All button have an !important to be always sans-serif

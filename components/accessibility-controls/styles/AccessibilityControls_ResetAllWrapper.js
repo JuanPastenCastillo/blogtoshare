@@ -10,6 +10,8 @@ export const AccessibilityControls_ResetAllWrapper = styled.div`
 
   filter: sepia(70%);
   cursor: pointer;
+  
+  font-family: sans-serif !important;
 
   &:hover {
     background-color: red;

@@ -78,6 +78,7 @@ export const AccessibilityControls = ({ setFontSize, setLetterSpacing, setWordSp
       widthParent={widthParent}
       widthElementToShowAndHide={widthElementToShowAndHide.current?.clientWidth}
       className={nameToCloseTheFilters}>
+
       <AccessibilityControls_TextSize
         setFontSize={setFontSize}
         refToFirstAccessibilityControl={refToFirstAccessibilityControl}
