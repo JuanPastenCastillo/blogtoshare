@@ -22,12 +22,20 @@ export const AccessibilityControlsWrapper = styled.div`
   border-top-left-radius: 28px;
   border-top-right-radius: 28px;
   border: 2px solid white;
+  
+  padding-top:0.8rem;
+  padding-bottom:0.8rem;
 
   * {
     font-size: 22px !important;
     letter-spacing: normal !important;
     word-spacing: normal !important;
     line-height: normal !important;
+  }
+  
+  & > :nth-last-child(3){
+    padding-bottom:12px;
+    
   }
 
   & > :last-child {
@@ -38,7 +46,7 @@ export const AccessibilityControlsWrapper = styled.div`
     left: ${({ widthElementToShowAndHide, show }) => (show ? `-${widthElementToShowAndHide}px` : `-${widthElementToShowAndHide}px`)};
 
     border: none;
-    padding: 4px;
+    padding: 8px;
 
     fill: ${({ show }) => (show ? `#00ddff` : ``)};
     background-color: ${({ show }) => show && `hsl(240, 5.7%, 17.8%)`};
@@ -49,5 +57,23 @@ export const AccessibilityControlsWrapper = styled.div`
     &:hover {
       filter: brightness(95%);
     }
+  }
+  
+  
+  
+  
+  
+  @media (max-height: 479px) {
+    overflow-y:${({ show }) => (show ? `scroll` : ``)};
+    height:${({ show }) => (show ? `100vh` : ``)};
+    
+    overflow-x:none;
+    
+    & > :last-child{
+      left:${({ show }) => (show ? `0` : ``)};
+      position:${({ show }) => (show ? `sticky` : ``)};
+    }
+    
+    
   }
 `

@@ -12,6 +12,9 @@ export const AccessibilityControls_ResetAllWrapper = styled.div`
   cursor: pointer;
   
   font-family: sans-serif !important;
+  
+  border: 2px solid crimson;
+  
 
   &:hover {
     background-color: red;

@@ -10,10 +10,9 @@ import { AccessibilityControls_TextSize } from "./AccessibilityControls_TextSize
 import { AccessibilityControls_WordSpacing } from "./AccessibilityControls_WordSpacing.js"
 import { AccessibilityControlsWrapper } from "./styles/AccessibilityControlsWrapper.js"
 
-const nameToCloseTheFilters = "nameToCloseTheFilters-AccessibilityControls"
-
 export const AccessibilityControls = ({ setFontSize, setLetterSpacing, setWordSpacing, setLineHeight, setMarginIniline, setFontFamily }) => {
   const [show, setShow] = useState(false)
+  // console.log('show:', show)
 
   const handleShow = (e) => {
     if (e.type === "click" || e.code === "F1" || e.code === "Enter" || e.key === "Enter") {
@@ -52,20 +51,15 @@ export const AccessibilityControls = ({ setFontSize, setLetterSpacing, setWordSp
   }, [show, refToFirstAccessibilityControl])
 
   useEffect(() => {
-    const handleResize = () => {
+    if (!getWidthRef.current) return
+    const resizeObserver = new ResizeObserver(() => {
       const width = getWidthRef.current.offsetWidth
       setWidthParent(width)
-    }
-
-    window.addEventListener("resize", handleResize)
-
-    return () => window.removeEventListener("resize", handleResize)
+    })
+    resizeObserver.observe(getWidthRef.current)
+    return () => resizeObserver.disconnect()
   }, [])
 
-  useEffect(() => {
-    const width = getWidthRef.current.offsetWidth
-    setWidthParent(width)
-  }, [])
 
   useOutsideHide(getWidthRef, setShow)
 
@@ -76,9 +70,7 @@ export const AccessibilityControls = ({ setFontSize, setLetterSpacing, setWordSp
       show={show}
       ref={getWidthRef}
       widthParent={widthParent}
-      widthElementToShowAndHide={widthElementToShowAndHide.current?.clientWidth}
-      className={nameToCloseTheFilters}>
-
+      widthElementToShowAndHide={widthElementToShowAndHide?.current?.offsetWidth}>
       <AccessibilityControls_TextSize
         setFontSize={setFontSize}
         refToFirstAccessibilityControl={refToFirstAccessibilityControl}
@@ -110,9 +102,9 @@ export const AccessibilityControls = ({ setFontSize, setLetterSpacing, setWordSp
         clickOnDefaultEverything={clickOnDefaultEverything}
       />
 
-      <AccessibilityControls_ResetAll
-        setClickOnDefaultEverything={setClickOnDefaultEverything}
-      />
+      <AccessibilityControls_ResetAll setClickOnDefaultEverything={setClickOnDefaultEverything} />
+
+
 
       <button
         onClick={handleShow}
