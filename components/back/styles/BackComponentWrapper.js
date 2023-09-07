@@ -4,9 +4,14 @@ import { PRIMARY, SECONDARY } from "../../../assets/Colors"
 export const BackComponentWrapper = styled.div`
   width:33px;
   
-  /* position: relative; */
-  /* z-index:999; */
-
+  position: sticky;
+  top:8px;
+  left:8px;
+  z-index:1;
+  
+  background-color: black;;
+  border-radius: 8px;
+  
   & > :nth-child(1) {
     width: 33px;
     height: 33px;

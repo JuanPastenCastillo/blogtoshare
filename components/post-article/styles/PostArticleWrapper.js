@@ -5,6 +5,7 @@ export const PostArticleWrapper = styled.div`
 !FH
 This padding should be thinked in order to have a good read
 */
+
   padding: 2rem;
   color: #fff;
   overflow-x: hidden;
@@ -51,17 +52,6 @@ This padding should be thinked in order to have a good read
   h6 > :nth-child(1):hover {
     path {
       fill: cornflowerblue;
-    }
-  }
-
-  & > :nth-child(1) {
-    position: sticky;
-    top: 0;
-    z-index: 2;
-    margin-left: -2rem;
-
-    & > svg {
-      background-color: black;
     }
   }
 

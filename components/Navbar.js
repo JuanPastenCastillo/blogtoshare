@@ -6,9 +6,9 @@ import { useHeightNavbar_Ctx } from "../context/HeightNavbarContext.js"
 import { NavbarWrapper } from "./styles/NavbarWrapper.js"
 
 export const Navbar = () => {
-  const [navExpanded, setNavExpanded] = useState(false)
+  const [navExpanded, setNavExpanded] = useState(true)
 
-  const handleNavExpanded = (e) => {
+  const handleNavExpanded = () => {
     setNavExpanded((prevState) => !prevState)
   }
 
@@ -22,6 +22,7 @@ export const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY
+
       if (currentScrollY > prevScrollY && prevScrollY >= 46) {
         setMustShow(false)
       } else {
