@@ -65,6 +65,8 @@ export const NavbarWrapper = styled.nav`
     margin-inline: 32px;
     justify-content: center;
     gap: 16px;
+    
+    overflow: hidden;
 
     & > li {
       display: flex;
@@ -133,25 +135,22 @@ export const NavbarWrapper = styled.nav`
     & > :nth-child(2) {
       gap: 0px;
       margin-inline: 0px;
-      /* display: ${(x) => (x.navExpanded ? "absolute" : "none")}; */
       flex-direction: column;
 
       background-color: ${SECONDARY.SECONDARY_DARK};
       
       background-color:darkcyan;
       
-      /* position:${({ navExpanded }) => (navExpanded ? "sticky" : "none")};
-      inset:${({ navExpanded }) => (navExpanded ? "0" : "")};
-      top:${({ navExpanded }) => (navExpanded ? "100%" : "")}; */
-      
-      /* visibility:${({ navExpanded }) => (navExpanded ? "visible" : "hidden")}; */
-      
-      /* position:${({ navExpanded }) => (navExpanded ? "absolute" : "")}; */
       position:${({ navExpanded }) => (navExpanded ? "absolute" : "")};
       display:${({ navExpanded }) => (navExpanded ? "" : "none")};
       left:0;
       right:0;
       z-index:2;
+      
+      & > li{
+        border-radius:0px;
+        
+      }
 
       & > a {
         border: 2px solid transparent;
