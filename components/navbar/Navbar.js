@@ -1,8 +1,8 @@
 import Link from "next/link.js"
 import { useRouter } from "next/router.js"
 import { useEffect, useRef, useState } from "react"
-import { BarResponsiveMenuSVG } from "../assets/icons/index.js"
-import { useHeightNavbar_Ctx } from "../context/HeightNavbarContext.js"
+import { BarResponsiveMenuSVG } from "../../assets/icons/index.js"
+import { useHeightNavbar_Ctx } from "../../context/HeightNavbarContext.js"
 import { NavbarWrapper } from "./styles/NavbarWrapper.js"
 
 export const Navbar = () => {
@@ -47,7 +47,7 @@ export const Navbar = () => {
 
   useEffect(() => {
     setHeightNavbar(refNavbar.current.clientHeight)
-  }, [refNavbar])
+  }, [refNavbar.current])
 
   return (
     <NavbarWrapper

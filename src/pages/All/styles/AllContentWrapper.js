@@ -3,14 +3,16 @@ import styled from "styled-components";
 const AllContentWrapper = styled.div`
   display: grid;
   gap:1rem;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
+  
+  padding: 24px;
   
   & > ul{
-    border: 2px solid green;
     
     & > li{
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+      
     }
     
     & > li > a{

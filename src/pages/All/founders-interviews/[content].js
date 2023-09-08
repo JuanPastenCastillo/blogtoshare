@@ -1,10 +1,10 @@
 import { useRouter } from "next/router"
 import { useEffect, useState } from "react"
-import { References } from "../../../../../components/back/references/References"
-import { PostArticle } from "../../../../../components/post-article/PostArticle"
-import { DynamicFunction } from "../../../../../utils/GetDynamicImport.js"
+import { References } from "../../../../components/back/references/References"
+import { PostArticle } from "../../../../components/post-article/PostArticle"
+import { DynamicFunction } from "../../../../utils/GetDynamicImport.js"
 
-const Dinamyc = () => {
+export default function Dinamyc() {
   const router = useRouter()
   const [dataToShow, setDataToShow] = useState()
 
@@ -57,4 +57,4 @@ const Dinamyc = () => {
     </>
   )
 }
-export default Dinamyc
+

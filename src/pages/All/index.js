@@ -5,11 +5,17 @@ const AllContent = () => {
 
   return (
     <AllContentWrapper>
-      <h2>Here you can find all the content of this blog. The topics are:</h2>
+      <h2>Check all this excited topics</h2>
 
       <ul>
         <li>
-          <Link href="/All/howto-founder">How To Founder</Link>
+          <Link href="/All/philosophical-reflection">Philosophical Reflection</Link>
+        </li>
+        <li>
+          <Link href="/All/founders-interviews">Founders Interviews</Link>
+        </li>
+        <li>
+          <Link href="/All/stress-management">Stress Management</Link>
         </li>
       </ul>
 

@@ -1,12 +1,12 @@
 import Link from "next/link"
 import { useRouter } from "next/router.js"
 import { Fragment, useEffect } from "react"
-import { BackComponent } from "../../../../../components/back/BackComponent.js"
-import { DATA_TO_DISPLAY } from "../../../../../components/howto-founder/content/DATA_TO_DISPLAY.JS"
-import { useUserView_Ctx } from "../../../../../context/UserViewContext.js"
+import { BackComponent } from "../../../../components/back/BackComponent"
+import { DATA_TO_DISPLAY } from "../../../../components/howto-founder/content/DATA_TO_DISPLAY.JS"
+import { useUserView_Ctx } from "../../../../context/UserViewContext.js"
 import HowToFounder_ContentWrapper from "./styles/HowToFounder_ContentWrapper.js"
 
-const HowToFounder_Content = () => {
+export default function INDEX_FoundersInterviews() {
   const router = useRouter()
   const { asPath } = router
 
@@ -31,8 +31,7 @@ const HowToFounder_Content = () => {
   return (
     <HowToFounder_ContentWrapper>
       <BackComponent />
-      <h2>Content</h2>
-      <p>Click or touch on some of the titles to go to the content</p>
+      <h1>Interviews to Founders and Leardership</h1>
 
       <ul>
         {DATA_TO_DISPLAY.map((x, i) => {
@@ -56,4 +55,4 @@ const HowToFounder_Content = () => {
     </HowToFounder_ContentWrapper>
   )
 }
-export default HowToFounder_Content
+

@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components"
-import { PRIMARY, SECONDARY } from "../../assets/Colors.js"
+import { PRIMARY, SECONDARY } from "../../../assets/Colors"
+
 
 const milliseconsToUse = `0.2s`
 
@@ -30,8 +31,8 @@ export const NavbarWrapper = styled.nav`
   margin-top: 16px;
   padding-bottom: 2px;
 
-  box-shadow: 0.3px 0.5px 0.7px hsl(218.5, 79.2%, 66.1%, 0.6), 0.5px 0.9px 1.2px -1.2px hsl(218.5, 79.2%, 66.1%, 0.6),
-    1.2px 2.4px 3px -2.5px hsl(218.5, 79.2%, 66.1%, 0.6);
+  /* box-shadow: 0.3px 0.5px 0.7px hsl(218.5, 79.2%, 66.1%, 0.6), 0.5px 0.9px 1.2px -1.2px hsl(218.5, 79.2%, 66.1%, 0.6),
+    1.2px 2.4px 3px -2.5px hsl(218.5, 79.2%, 66.1%, 0.6); */
 
     background-color: hsl(248.6, 11.5%, 12%);
     
@@ -48,7 +49,6 @@ export const NavbarWrapper = styled.nav`
     top: 0;
     z-index: 2;
 
-    /* opacity:0; */
   }
 
   & > :nth-child(1) {
@@ -81,6 +81,9 @@ export const NavbarWrapper = styled.nav`
       transition: all 0.1s;
 
       border-bottom: 2px solid ${PRIMARY.PRIMARY_DARK};
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      
       height: 55px;
 
       &:hover,

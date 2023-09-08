@@ -1,6 +1,5 @@
-import { Footer } from "./Footer"
-import { Navbar } from "./Navbar"
 import { AccessibilityControls } from "./accessibility-controls/AccessibilityControls"
+import { Navbar } from "./navbar/Navbar"
 
 export const Layout = ({ children, setFontSize, setLetterSpacing, setWordSpacing, setLineHeight, setMarginIniline, setFontFamily }) => {
   return (
@@ -18,7 +17,7 @@ export const Layout = ({ children, setFontSize, setLetterSpacing, setWordSpacing
         setFontFamily={setFontFamily}
       />
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }

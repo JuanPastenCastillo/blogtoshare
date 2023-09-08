@@ -10,10 +10,21 @@ const HowToFounder_ContentWrapper = styled.div`
     }
   }
 
-  & > ul > li {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 32px;
+  & > *:not(:first-child) {
+    padding-inline: 24px;
+  }
+
+  & > ul {
+    & > li {
+      display: flex;
+      padding: 24px;
+
+      & > a {
+        &:hover {
+          color: cornflowerblue;
+        }
+      }
+    }
   }
 `
 
