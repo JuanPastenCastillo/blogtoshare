@@ -5,7 +5,7 @@ export default function HowToFounder() {
   const { push } = useRouter()
 
   useEffect(() => {
-    push("/All")
+    push("/all")
   }, [])
 
 

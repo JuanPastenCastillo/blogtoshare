@@ -9,16 +9,16 @@ const AllContent = () => {
 
       <ul>
         <li>
-          <Link href="/All/philosophical-reflection">Philosophical Reflection</Link>
+          <Link href="/all/philosophical-reflection">Philosophical Reflection</Link>
         </li>
         <li>
-          <Link href="/All/leadership">How is Leadership According to Research?</Link>
+          <Link href="/all/leadership">How is Leadership According to Research?</Link>
         </li>
         <li>
-          <Link href="/All/founders-interviews">Founders Interviews</Link>
+          <Link href="/all/founders-interviews">Founders Interviews</Link>
         </li>
         <li>
-          <Link href="/All/stress-management">Stress Management</Link>
+          <Link href="/all/stress-management">Stress Management</Link>
         </li>
       </ul>
 

@@ -62,9 +62,9 @@ export const Navbar = () => {
           <Link href="/"> About this page</Link>
         </li>
         <li className={checkPathnameAll}>
-          <Link href="/All">All Content</Link>
+          <Link href="/all">All Content</Link>
         </li>
-        <li className={pathname === "/Contact" ? "active" : null}>
+        <li className={pathname === "/contact" ? "active" : null}>
           <Link href="/contact">Contact</Link>
         </li>
       </ul>
