@@ -5,6 +5,8 @@ export const AboutThisPageWrapper = styled.div`
   display: grid;
   justify-items: center;
   
+  grid-template-columns: repeat(1, minmax(200px, 1fr));
+  
   gap:2rem;
   
   margin-inline: 24px;
@@ -16,7 +18,7 @@ export const AboutThisPageWrapper = styled.div`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    font-size: 4rem;
+    font-size: clamp(3.5rem, 10vw, 4.8rem);
     span {
       font-size: inherit;
       display: block;

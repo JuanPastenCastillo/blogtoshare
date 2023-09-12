@@ -5,7 +5,7 @@ export const AboutThisPage = () => {
   return (
     <AboutThisPageWrapper>
       <h1>Blog of <span>JUAN PASTÉN CASTILLO</span></h1>
-      <p><Link href="/All">Visit</Link> all the excited topics I like to share about</p>
+      <p><Link href="/all">Visit</Link> all the excited topics I like to share about</p>
     </AboutThisPageWrapper>
   )
 }
