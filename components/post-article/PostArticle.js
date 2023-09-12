@@ -26,7 +26,7 @@ export const PostArticle = ({ dataToShow, numberPost = "" }) => {
       <BackComponent />
       <PostArticleWrapper heightNavbar={heightNavbar}>
         <h1>{dataToShow.title}</h1>
-        {numberPost ? (
+        {numberPost !== "" ? (
           <>
             <p>Post number: {numberPost}</p>
           </>

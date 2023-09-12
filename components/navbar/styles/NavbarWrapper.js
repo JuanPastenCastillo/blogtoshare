@@ -1,7 +1,6 @@
 import styled, { keyframes } from "styled-components"
 import { PRIMARY, SECONDARY } from "../../../assets/Colors"
 
-
 const milliseconsToUse = `0.2s`
 
 const mustHideKeyframes = keyframes`
@@ -31,11 +30,7 @@ export const NavbarWrapper = styled.nav`
   margin-top: 16px;
   padding-bottom: 2px;
 
-  /* box-shadow: 0.3px 0.5px 0.7px hsl(218.5, 79.2%, 66.1%, 0.6), 0.5px 0.9px 1.2px -1.2px hsl(218.5, 79.2%, 66.1%, 0.6),
-    1.2px 2.4px 3px -2.5px hsl(218.5, 79.2%, 66.1%, 0.6); */
-
-    background-color: hsl(248.6, 11.5%, 12%);
-    
+  background-color: hsl(248.6, 11.5%, 12%);
 
   &.mustShow {
     animation: ${mustShowKeyframes} ${milliseconsToUse} linear;
@@ -48,7 +43,6 @@ export const NavbarWrapper = styled.nav`
     position: sticky;
     top: 0;
     z-index: 2;
-
   }
 
   & > :nth-child(1) {
@@ -65,7 +59,7 @@ export const NavbarWrapper = styled.nav`
     margin-inline: 32px;
     justify-content: center;
     gap: 16px;
-    
+
     overflow: hidden;
 
     & > li {
@@ -85,7 +79,7 @@ export const NavbarWrapper = styled.nav`
       border-bottom: 2px solid ${PRIMARY.PRIMARY_DARK};
       border-top-left-radius: 8px;
       border-top-right-radius: 8px;
-      
+
       height: 55px;
 
       &:hover,
@@ -110,8 +104,7 @@ export const NavbarWrapper = styled.nav`
   }
 
   @media (max-width: 768px) {
-    box-shadow: 0.3px 0.5px 0.7px ${SECONDARY.SECONDARY}, 0.5px 0.9px 1.2px -1.2px ${SECONDARY.SECONDARY},
-      1.2px 2.4px 3px -2.5px ${SECONDARY.SECONDARY};
+    box-shadow: 0.3px 0.5px 0.7px ${SECONDARY.SECONDARY}, 0.5px 0.9px 1.2px -1.2px ${SECONDARY.SECONDARY}, 1.2px 2.4px 3px -2.5px ${SECONDARY.SECONDARY};
 
     padding-bottom: 0px;
 
@@ -138,18 +131,17 @@ export const NavbarWrapper = styled.nav`
       flex-direction: column;
 
       background-color: ${SECONDARY.SECONDARY_DARK};
-      
-      background-color:darkcyan;
-      
-      position:${({ navExpanded }) => (navExpanded ? "absolute" : "")};
-      display:${({ navExpanded }) => (navExpanded ? "" : "none")};
-      left:0;
-      right:0;
-      z-index:2;
-      
-      & > li{
-        border-radius:0px;
-        
+
+      background-color: darkcyan;
+
+      position: ${({ navExpanded }) => (navExpanded ? "absolute" : "")};
+      display: ${({ navExpanded }) => (navExpanded ? "" : "none")};
+      left: 0;
+      right: 0;
+      z-index: 2;
+
+      & > li {
+        border-radius: 0px;
       }
 
       & > a {

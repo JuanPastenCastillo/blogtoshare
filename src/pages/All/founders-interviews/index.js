@@ -40,11 +40,11 @@ export default function INDEX_FoundersInterviews() {
               <li>
                 <Link
                   href={{
-                    pathname: `content/${i}`
+                    pathname: `content/${i + 1}`
                   }}
-                  as={`${asPath}/${i}`}>
+                  as={`${asPath}/${i + 1}`}>
                   <h3>
-                    {i}) {x.title}
+                    {i + 1}) {x.title}
                   </h3>
                 </Link>
               </li>

@@ -2,6 +2,7 @@ import { Fragment } from "react"
 import { ReferencesWrapper } from "./styles/ReferencesWrapper"
 
 export const References = ({ referencesData }) => {
+  console.log('referencesData:', referencesData)
   const isOnlyOneReference = Object.prototype.toString.call(referencesData) === "[object Object]"
 
   if (isOnlyOneReference) {
