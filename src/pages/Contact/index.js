@@ -1,8 +1,9 @@
-const Contact = (parameters) => {
+import { MAIN_Contact } from "../../../components/pages/contact/MAIN_Contact"
+
+export default function INDEX_Contact() {
   return (
-    <div>
-      Contact
-    </div>
+    <>
+      <MAIN_Contact />
+    </>
   )
 }
-export default Contact
