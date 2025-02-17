@@ -10,9 +10,15 @@ import { AccessibilityControls_TextSize } from "./AccessibilityControls_TextSize
 import { AccessibilityControls_WordSpacing } from "./AccessibilityControls_WordSpacing.js"
 import { AccessibilityControlsWrapper } from "./styles/AccessibilityControlsWrapper.js"
 
-export const AccessibilityControls = ({ setFontSize, setLetterSpacing, setWordSpacing, setLineHeight, setMarginIniline, setFontFamily }) => {
+export const AccessibilityControls = ({
+  setFontSize,
+  setLetterSpacing,
+  setWordSpacing,
+  setLineHeight,
+  setMarginIniline,
+  setFontFamily
+}) => {
   const [show, setShow] = useState(false)
-  // console.log('show:', show)
 
   const handleShow = (e) => {
     if (e.type === "click" || e.code === "F1" || e.code === "Enter" || e.key === "Enter") {
@@ -60,7 +66,6 @@ export const AccessibilityControls = ({ setFontSize, setLetterSpacing, setWordSp
     return () => resizeObserver.disconnect()
   }, [])
 
-
   useOutsideHide(getWidthRef, setShow)
 
   const [clickOnDefaultEverything, setClickOnDefaultEverything] = useState(false)
@@ -103,8 +108,6 @@ export const AccessibilityControls = ({ setFontSize, setLetterSpacing, setWordSp
       />
 
       <AccessibilityControls_ResetAll setClickOnDefaultEverything={setClickOnDefaultEverything} />
-
-
 
       <button
         onClick={handleShow}
