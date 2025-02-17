@@ -24,7 +24,8 @@ export const GlobalStyle = createGlobalStyle`
 html,
 body {
   max-width: 100vw;
-   margin-inline: ${({ marginIniline }) => marginIniline};
+  margin-inline: ${({ marginIniline }) => marginIniline};
+  scrollbar-gutter: stable;
 }
 
 h1{
